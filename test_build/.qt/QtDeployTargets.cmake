@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_test_karchive_FILE /home/lemon/Desktop/Projects/2024_Research_Samsa/test_build/test_karchive)
-set(__QT_DEPLOY_TARGET_test_karchive_TYPE EXECUTABLE)

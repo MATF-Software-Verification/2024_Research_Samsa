@@ -1,3 +1,0 @@
-/home/lemon/Desktop/Projects/2024_Research_Samsa/test_build/CMakeFiles/test_karchive.dir
-/home/lemon/Desktop/Projects/2024_Research_Samsa/test_build/CMakeFiles/edit_cache.dir
-/home/lemon/Desktop/Projects/2024_Research_Samsa/test_build/CMakeFiles/rebuild_cache.dir
