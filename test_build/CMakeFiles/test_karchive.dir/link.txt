@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_karchive.dir/test_karchive.cpp.o -o test_karchive  -Wl,-rpath,/usr/local/lib/x86_64-linux-gnu:/home/lemon/Qt/6.8.3/gcc_64/lib /usr/local/lib/x86_64-linux-gnu/libKF6Archive.so.6.22.0 /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6.8.3 
