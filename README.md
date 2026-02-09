@@ -12,3 +12,7 @@ Author: Luka Stanković (<a href = "https://github.com/lukastan">lukastan)<br>
 ## Tools used:
 
 ## Key takeaways:
+
+## License:
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE) file for details.<br>
+This project contains KArchive as a submodule, which is licensed under the LGPL.
