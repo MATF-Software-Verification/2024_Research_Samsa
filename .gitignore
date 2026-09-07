@@ -1,4 +1,57 @@
+# The course CI gate FAILS the build if ANY ELF file is found in the repository
+# (`find . -exec file {} \; | grep -i elf`). Everything compiled must be ignored here.
+# Tool *outputs* (logs, reports, coverage HTML, AFL crash inputs, heaptrack traces)
+# are deliverables and must stay tracked -- do not add broad rules that catch them.
+
+# ---- Build trees ----
+build/
+build-*/
+build_*/
+cmake-build-*/
+
+# ---- CMake in-tree droppings ----
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+/Makefile
+*_autogen/
+
+# ---- Compiled objects, libraries, executables ----
 *.o
+*.a
 *.so
-build
-.vscode
+*.so.*
+*.lo
+*.la
+*.ko
+*.obj
+*.exe
+*.dylib
+*.dll
+
+# ---- Coverage intermediates (the generated HTML/info reports ARE kept) ----
+*.gcno
+*.gcda
+*.gcov
+
+# ---- Sanitizer / profiling intermediates ----
+*.profraw
+*.profdata
+perf.data
+perf.data.old
+
+# ---- Local install / run trees ----
+/bin/
+/lib/
+prefix.sh
+
+# ---- Editor & OS ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
