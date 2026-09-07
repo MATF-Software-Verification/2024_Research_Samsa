@@ -1,0 +1,946 @@
+[1/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp.
+39029 warnings generated.
+[2/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp.
+77883 warnings generated.
+[3/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kar.cpp.
+115990 warnings generated.
+[4/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kbzip2filter.cpp.
+153198 warnings generated.
+[5/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp.
+191141 warnings generated.
+[6/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kfilterbase.cpp.
+228309 warnings generated.
+[7/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp.
+265541 warnings generated.
+[8/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp.
+302744 warnings generated.
+[9/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klzfilter.cpp.
+339964 warnings generated.
+[10/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/knonefilter.cpp.
+377849 warnings generated.
+[11/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/krcc.cpp.
+415957 warnings generated.
+[12/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp.
+454090 warnings generated.
+[13/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kxzfilter.cpp.
+491306 warnings generated.
+[14/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp.
+530169 warnings generated.
+[15/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzstdfilter.cpp.
+567390 warnings generated.
+/home/lemon/Desktop/Projects/2024_Research_Samsa/build_tidy/src/karchive_export.h:107:61: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  107 | #  define KARCHIVE_ENABLE_DEPRECATED_SINCE(major, minor) (((major<<16)|(minor<<8)) > KARCHIVE_DISABLE_DEPRECATED_BEFORE_AND_AT)
+      |                                                             ^    
+      |                                                             (    )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/build_tidy/src/karchive_export.h:107:73: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+  107 | #  define KARCHIVE_ENABLE_DEPRECATED_SINCE(major, minor) (((major<<16)|(minor<<8)) > KARCHIVE_DISABLE_DEPRECATED_BEFORE_AND_AT)
+      |                                                                         ^    
+      |                                                                         (    )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:41:23: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+   41 | #define BUFFER_SIZE 8 * 1024
+      |                       ^     
+      |                     (       )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:310:22: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  310 |         for (int i = unpackSizes.size() - 1; i >= 0; i--) {
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:375:44: warning: 2 adjacent parameters of 'findInStream' of similar type ('quint32 &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  375 |     void findInStream(quint32 streamIndex, quint32 &coderIndex, quint32 &coderStreamIndex) const
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:375:53: note: the first parameter in the range is 'coderIndex'
+  375 |     void findInStream(quint32 streamIndex, quint32 &coderIndex, quint32 &coderStreamIndex) const
+      |                                                     ^~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:375:74: note: the last parameter in the range is 'coderStreamIndex'
+  375 |     void findInStream(quint32 streamIndex, quint32 &coderIndex, quint32 &coderStreamIndex) const
+      |                                                                          ^~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:387:45: warning: 2 adjacent parameters of 'findOutStream' of similar type ('quint32 &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  387 |     void findOutStream(quint32 streamIndex, quint32 &coderIndex, quint32 &coderStreamIndex) const
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:387:54: note: the first parameter in the range is 'coderIndex'
+  387 |     void findOutStream(quint32 streamIndex, quint32 &coderIndex, quint32 &coderStreamIndex) const
+      |                                                      ^~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:387:75: note: the last parameter in the range is 'coderStreamIndex'
+  387 |     void findOutStream(quint32 streamIndex, quint32 &coderIndex, quint32 &coderStreamIndex) const
+      |                                                                           ^~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:401:22: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  401 |         for (int i = folderInfos.size() - 1; i >= 0; i--) {
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:714:18: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  714 |         skipData(readNumber());
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:776:21: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  776 |     int numCoders = readNumber();
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:812:33: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  812 |             info.numInStreams = readNumber();
+      |                                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:813:34: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  813 |             info.numOutStreams = readNumber();
+      |                                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:821:40: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  821 |             const int propertiesSize = readNumber();
+      |                                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:841:24: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  841 |     int numBindPairs = numOutStreamsTotal - 1;
+      |                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:847:28: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  847 |     int numPackedStreams = numInStreamsTotal - numBindPairs;
+      |                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:881:25: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  881 |         int dataIndex = readNumber();
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:931:29: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  931 |             readHashDigests(numPackStreams, packCRCsDefined, packCRCs);
+      |                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:934:18: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  934 |         skipData(readNumber());
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:939:32: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  939 |         packCRCsDefined.resize(numPackStreams, false);
+      |                                ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:940:25: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  940 |         packCRCs.resize(numPackStreams, 0);
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:956:28: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  956 |     const int numFolders = readNumber();
+      |                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:968:25: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  968 |         int dataIndex = readNumber();
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1023:23: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1023 |         if (!skipData(readNumber())) {
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1053:18: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1053 |         skipData(readNumber());
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1070:28: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1070 |                 int size = readNumber();
+      |                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1090:27: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1090 |             numDigests += numSubstreams;
+      |                           ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1092:28: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1092 |         numDigestsTotal += numSubstreams;
+      |                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1124:22: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1124 |             skipData(readNumber());
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1153:24: warning: narrowing conversion from 'long long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1153 |     int secondsInDay = time % SECSPERDAY;
+      |                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1164:44: warning: performing an implicit widening conversion to type 'long' of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+ 1164 |     long int years = (20 * days - 2442) / (5 * DAYSPERNORMALQUADRENNIUM);
+      |                                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1164:44: note: make conversion explicit to silence this warning
+   26 |     long int years = (20 * days - 2442) / (5 * DAYSPERNORMALQUADRENNIUM);
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            static_cast<long>(          )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1164:44: note: perform multiplication in a wider type
+ 1164 |     long int years = (20 * days - 2442) / (5 * DAYSPERNORMALQUADRENNIUM);
+      |                                            ^
+      |                                            static_cast<long>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1192:22: warning: narrowing conversion from 'unsigned long long' to signed type 'long long' is implementation-defined [bugprone-narrowing-conversions]
+ 1192 |     long long secs = seconds * (long long)TICKSPERSEC + TICKS_1601_TO_1970;
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1337:46: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'quint32' (aka 'unsigned int') [bugprone-implicit-widening-of-multiplication-result]
+ 1337 |         result.reserve(saltPassword.size() + rounds * 8);
+      |                                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1337:46: note: make conversion explicit to silence this warning
+ 1337 |         result.reserve(saltPassword.size() + rounds * 8);
+      |                                              ^~~~~~~~~~
+      |                                              static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1337:46: note: perform multiplication in a wider type
+ 1337 |         result.reserve(saltPassword.size() + rounds * 8);
+      |                                              ^~~~~~
+      |                                              static_cast<unsigned long long>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1344:31: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1344 |                 result.append(value >> (k * 8));
+      |                               ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1397:18: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1397 |     int padLen = encryptedData.size() % 16;
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1414:127: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1414 |     if (EVP_DecryptUpdate(ctx, (unsigned char *)decryptedData.data(), &len, (const unsigned char *)encryptedData.constData(), encryptedData.size()) != 1) {
+      |                                                                                                                               ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1476:17: warning: 2 adjacent parameters of 'decode' of similar type ('quint32') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 1476 |     void decode(quint32 start, quint32 size)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1476:25: note: the first parameter in the range is 'start'
+ 1476 |     void decode(quint32 start, quint32 size)
+      |                         ^~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1476:40: note: the last parameter in the range is 'size'
+ 1476 |     void decode(quint32 start, quint32 size)
+      |                                        ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1587:90: warning: 2 adjacent parameters of 'decodeBCJ2' of similar type ('const QByteArray &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 1587 | static QByteArray decodeBCJ2(const QByteArray &mainStream, const QByteArray &callStream, const QByteArray &jumpStream, const QByteArray &rangeBuffer)
+      |                                                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1587:108: note: the first parameter in the range is 'jumpStream'
+ 1587 | static QByteArray decodeBCJ2(const QByteArray &mainStream, const QByteArray &callStream, const QByteArray &jumpStream, const QByteArray &rangeBuffer)
+      |                                                                                                            ^~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1587:138: note: the last parameter in the range is 'rangeBuffer'
+ 1587 | static QByteArray decodeBCJ2(const QByteArray &mainStream, const QByteArray &callStream, const QByteArray &jumpStream, const QByteArray &rangeBuffer)
+      |                                                                                                                                          ^~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1613:30: warning: narrowing conversion from 'unsigned char' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1613 |             outStream.append(b);
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1649:30: warning: narrowing conversion from 'unsigned char' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1649 |             outStream.append((unsigned char)(dest));
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1650:30: warning: narrowing conversion from 'unsigned char' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1650 |             outStream.append((unsigned char)(dest >> 8));
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1651:30: warning: narrowing conversion from 'unsigned char' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1651 |             outStream.append((unsigned char)(dest >> 16));
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1652:30: warning: narrowing conversion from 'unsigned char' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1652 |             outStream.append((unsigned char)(dest >> 24));
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1668:5: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+ 1668 |     switch (coder->methodID) {
+      |     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1854:23: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 1854 |             dev->seek(startPos);
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1855:56: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 1855 |             quint64 n = dev->read(encodedBuffer.get(), size);
+      |                                                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1860:58: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 1860 |             QByteArray deflatedData(encodedBuffer.get(), size);
+      |                                                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1873:30: warning: narrowing conversion from 'unsigned int' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1873 |                 coderIndex = coderIndexes[j];
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1875:30: warning: narrowing conversion from 'quint32' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1875 |                 coderIndex = mainCoderIndex;
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1901:30: warning: narrowing conversion from 'unsigned long' to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 1901 |             outBuffer.resize(std::min(unpackSize, static_cast<size_t>(kMaxQByteArraySize)));
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:1914:41: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1914 |                 int uncompressedBytes = outBuffer.size() - filter->outBufferAvailable();
+      |                                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2008:19: warning: narrowing conversion from 'unsigned char' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 2008 |     header.append(b);
+      |                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2068:72: warning: 2 adjacent parameters of 'writeAlignedBoolHeader' of similar type ('int') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 2068 | void K7Zip::K7ZipPrivate::writeAlignedBoolHeader(const QList<bool> &v, int numDefined, int type, unsigned itemSize)
+      |                                                                        ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2068:76: note: the first parameter in the range is 'numDefined'
+ 2068 | void K7Zip::K7ZipPrivate::writeAlignedBoolHeader(const QList<bool> &v, int numDefined, int type, unsigned itemSize)
+      |                                                                            ^~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2068:92: note: the last parameter in the range is 'type'
+ 2068 | void K7Zip::K7ZipPrivate::writeAlignedBoolHeader(const QList<bool> &v, int numDefined, int type, unsigned itemSize)
+      |                                                                                            ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2173:26: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2173 |             for (int t = idSize - 1; t >= 0; t--, id >>= 8) {
+      |                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2199:43: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 2199 |                 writeByte(info.properties[j]);
+      |                                           ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2350:25: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2350 |         const int ret = flt.write(header);
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2537:44: warning: 2 adjacent parameters of 'writeStartHeader' of convertible types are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 2537 | void K7Zip::K7ZipPrivate::writeStartHeader(const quint64 nextHeaderSize, const quint32 nextHeaderCRC, const quint64 nextHeaderOffset)
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2537:58: note: the first parameter in the range is 'nextHeaderSize'
+ 2537 | void K7Zip::K7ZipPrivate::writeStartHeader(const quint64 nextHeaderSize, const quint32 nextHeaderCRC, const quint64 nextHeaderOffset)
+      |                                                          ^~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2537:88: note: the last parameter in the range is 'nextHeaderCRC'
+ 2537 | void K7Zip::K7ZipPrivate::writeStartHeader(const quint64 nextHeaderSize, const quint32 nextHeaderCRC, const quint64 nextHeaderOffset)
+      |                                                                                        ^~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2537:44: note: 
+ 2537 | void K7Zip::K7ZipPrivate::writeStartHeader(const quint64 nextHeaderSize, const quint32 nextHeaderCRC, const quint64 nextHeaderOffset)
+      |                                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2537:74: note: 'const quint64' and 'const quint32' may be implicitly converted: 'const quint64' (as 'unsigned long long') -> 'const quint32' (as 'unsigned int'), 'const quint32' (as 'unsigned int') -> 'const quint64' (as 'unsigned long long')
+ 2537 | void K7Zip::K7ZipPrivate::writeStartHeader(const quint64 nextHeaderSize, const quint32 nextHeaderCRC, const quint64 nextHeaderOffset)
+      |                                                                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2585:17: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [bugprone-signed-char-misuse]
+ 2585 |     int major = header[6];
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2586:17: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [bugprone-signed-char-misuse]
+ 2586 |     int minor = header[7];
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2620:15: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 2620 |     dev->seek(nextHeaderOffset + 32);
+      |               ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2623:21: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 2623 |     inBuffer.resize(nextHeaderSize);
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2732:46: warning: performing an implicit widening conversion to type 'const qsizetype' (aka 'const long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+ 2732 |     static const qsizetype MAX_FILE_NUMBER = 1000 * 1000 * 1000;
+      |                                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2732:46: note: make conversion explicit to silence this warning
+ 2732 |     static const qsizetype MAX_FILE_NUMBER = 1000 * 1000 * 1000;
+      |                                              ^~~~~~~~~~~~~~~~~~
+      |                                              static_cast<const qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2732:46: note: perform multiplication in a wider type
+ 2732 |     static const qsizetype MAX_FILE_NUMBER = 1000 * 1000 * 1000;
+      |                                              ^~~~~~~~~~~
+      |                                              static_cast<const qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2733:32: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 2733 |     const qsizetype numFiles = fileNumFiles;
+      |                                ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2765:35: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2765 |                 d->readBoolVector(numFiles, emptyStreamVector);
+      |                                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2781:45: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2781 |                 if (!d->readUInt64DefVector(numFiles, d->cTimes, d->cTimesDefined)) {
+      |                                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2786:45: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2786 |                 if (!d->readUInt64DefVector(numFiles, d->aTimes, d->aTimesDefined)) {
+      |                                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2791:45: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2791 |                 if (!d->readUInt64DefVector(numFiles, d->mTimes, d->mTimesDefined)) {
+      |                                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2799:37: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2799 |                     int dataIndex = d->readNumber();
+      |                                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2816:36: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2816 |                 d->readBoolVector2(numFiles, attributesAreDefined);
+      |                                    ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2819:37: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2819 |                     int dataIndex = d->readNumber();
+      |                                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2837:45: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2837 |                 if (!d->readUInt64DefVector(numFiles, d->startPositions, d->startPositionsDefined)) {
+      |                                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2862:30: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2862 |             if (!d->skipData(d->readNumber())) {
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2953:22: warning: narrowing conversion from 'quint32' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2953 |             access = fileInfo->attributes >> 16;
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2968:23: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2968 |             oldPos += fileInfo->size;
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2973:21: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 2973 |         int index = fileInfo->path.lastIndexOf(QLatin1Char('/'));
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:2986:63: warning: narrowing conversion from 'unsigned long long' to signed type 'long long' is implementation-defined [bugprone-narrowing-conversions]
+ 2986 |             mTime = KArchivePrivate::time_tToDateTime(toTimeT(d->mTimes[i]));
+      |                                                               ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3009:40: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 3009 |                                        fileInfo->size,
+      |                                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3012:72: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 3012 |                 QString target = QFile::decodeName(d->outData.mid(pos, fileInfo->size));
+      |                                                                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3102:25: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3102 |         const int ret = flt.write(d->outData);
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3192:30: warning: 2 adjacent parameters of 'doPrepareWriting' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 3192 | bool K7Zip::doPrepareWriting(const QString &name,
+      |                              ^~~~~~~~~~~~~~~~~~~~
+ 3193 |                              const QString &user,
+      |                              ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3192:45: note: the first parameter in the range is 'name'
+ 3192 | bool K7Zip::doPrepareWriting(const QString &name,
+      |                                             ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3193:45: note: the last parameter in the range is 'user'
+ 3193 |                              const QString &user,
+      |                                             ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3218:13: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3218 |     int i = name.lastIndexOf(QLatin1Char('/'));
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3229:48: warning: narrowing conversion from 'mode_t' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3229 |             new K7ZipFileEntry(this, fileName, perm, mtime, user, group, QString() /*symlink*/, d->outData.size(), 0 /*unknown yet*/, d->outData);
+      |                                                ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3243:24: warning: 2 adjacent parameters of 'doWriteDir' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 3243 | bool K7Zip::doWriteDir(const QString &name,
+      |                        ^~~~~~~~~~~~~~~~~~~~
+ 3244 |                        const QString &user,
+      |                        ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3243:39: note: the first parameter in the range is 'name'
+ 3243 | bool K7Zip::doWriteDir(const QString &name,
+      |                                       ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3244:39: note: the last parameter in the range is 'user'
+ 3244 |                        const QString &user,
+      |                                       ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3271:13: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3271 |     int i = dirName.lastIndexOf(QLatin1Char('/'));
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3278:65: warning: narrowing conversion from 'mode_t' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3278 |     KArchiveDirectory *e = new KArchiveDirectory(this, dirName, perm, mtime, user, group, QString() /*symlink*/);
+      |                                                                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3282:28: warning: 2 adjacent parameters of 'doWriteSymLink' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 3282 | bool K7Zip::doWriteSymLink(const QString &name,
+      |                            ^~~~~~~~~~~~~~~~~~~~
+ 3283 |                            const QString &target,
+      |                            ~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3282:43: note: the first parameter in the range is 'name'
+ 3282 | bool K7Zip::doWriteSymLink(const QString &name,
+      |                                           ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3283:43: note: the last parameter in the range is 'target'
+ 3283 |                            const QString &target,
+      |                                           ^~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3307:13: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3307 |     int i = name.lastIndexOf(QLatin1Char('/'));
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/k7zip.cpp:3315:60: warning: narrowing conversion from 'mode_t' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 3315 |     K7ZipFileEntry *e = new K7ZipFileEntry(this, fileName, perm, mtime, user, group, target, 0, 0, nullptr);
+      |                                                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:115:35: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  115 |             if (match == nullptr) {
+      |                                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:117:14: note: end of the original
+  117 |             } else if (!match->isDirectory()) {
+      |              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:117:47: note: clone 1 starts here
+  117 |             } else if (!match->isDirectory()) {
+      |                                               ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:283:29: warning: 2 adjacent parameters of 'addLocalFile' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  283 | bool KArchive::addLocalFile(const QString &fileName, const QString &destName)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:283:44: note: the first parameter in the range is 'fileName'
+  283 | bool KArchive::addLocalFile(const QString &fileName, const QString &destName)
+      |                                            ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:283:69: note: the last parameter in the range is 'destName'
+  283 | bool KArchive::addLocalFile(const QString &fileName, const QString &destName)
+      |                                                                     ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:313:19: warning: narrowing conversion from 'ssize_t' (aka 'long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  313 |         int len = readlink(encodedFileName.data(), s.data(), s.size() - 1);
+      |                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:392:29: warning: narrowing conversion from '__mode_t' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  392 |                     perms = fi.st_mode;
+      |                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:557:44: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  557 |     if (auto len = cleanPath.size(); len > 2500 * 255) {
+      |                                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:557:44: note: make conversion explicit to silence this warning
+   24 |     if (auto len = cleanPath.size(); len > 2500 * 255) {
+      |                                            ^~~~~~~~~~
+      |                                            static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:557:44: note: perform multiplication in a wider type
+  557 |     if (auto len = cleanPath.size(); len > 2500 * 255) {
+      |                                            ^~~~
+      |                                            static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:610:15: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  610 |     int pos = path.lastIndexOf(QLatin1Char('/'));
+      |               ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:628:73: warning: narrowing conversion from 'mode_t' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  628 |     KArchiveDirectory *e = new KArchiveDirectory(q, dirname.toString(), rootDir->permissions(), rootDir->date(), rootDir->user(), rootDir->group(), QString());
+      |                                                                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:701:26: warning: 3 adjacent parameters of 'KArchiveEntryPrivate' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  701 |                          const QString &_user,
+      |                          ^~~~~~~~~~~~~~~~~~~~~
+  702 |                          const QString &_group,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  703 |                          const QString &_symlink)
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:701:41: note: the first parameter in the range is '_user'
+  701 |                          const QString &_user,
+      |                                         ^~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:703:41: note: the last parameter in the range is '_symlink'
+  703 |                          const QString &_symlink)
+      |                                         ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:790:25: warning: 2 adjacent parameters of 'KArchiveFilePrivate' of similar type ('qint64') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  790 |     KArchiveFilePrivate(qint64 _pos, qint64 _size)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:790:32: note: the first parameter in the range is '_pos'
+  790 |     KArchiveFilePrivate(qint64 _pos, qint64 _size)
+      |                                ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:790:45: note: the last parameter in the range is '_size'
+  790 |     KArchiveFilePrivate(qint64 _pos, qint64 _size)
+      |                                             ^~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:889:34: warning: performing an implicit widening conversion to type 'const qint64' (aka 'const long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  889 |         const qint64 chunkSize = 1024 * 1024;
+      |                                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:889:34: note: make conversion explicit to silence this warning
+  889 |         const qint64 chunkSize = 1024 * 1024;
+      |                                  ^~~~~~~~~~~
+      |                                  static_cast<const qint64>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:889:34: note: perform multiplication in a wider type
+  889 |         const qint64 chunkSize = 1024 * 1024;
+      |                                  ^~~~
+      |                                  static_cast<const qint64>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kbzip2filter.cpp:135:12: warning: narrowing conversion from 'unsigned int' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  135 |     return d->zStream.avail_in;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kbzip2filter.cpp:140:12: warning: narrowing conversion from 'unsigned int' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  140 |     return d->zStream.avail_out;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kbzip2filter.h:8:9: warning: declaration uses identifier '__kbzip2filter__h', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __kbzip2filter__h
+      |         ^~~~~~~~~~~~~~~~~
+      |         _kbzip2filter_h
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:264:26: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  264 |         d->buffer.resize(BUFFER_SIZE);
+      |                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:264:26: note: make conversion explicit to silence this warning
+  264 |         d->buffer.resize(BUFFER_SIZE);
+      |                          ^          
+      |                          static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:264:26: note: perform multiplication in a wider type
+  264 |         d->buffer.resize(BUFFER_SIZE);
+      |                          ^
+      |                          static_cast<qsizetype>(
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277:26: warning: narrowing conversion from 'Int' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  277 |     if (!d->filter->init(mode & ~QIODevice::Truncate)) {
+      |                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:409:30: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  409 |             d->buffer.resize(BUFFER_SIZE);
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:409:30: note: make conversion explicit to silence this warning
+  409 |             d->buffer.resize(BUFFER_SIZE);
+      |                              ^          
+      |                              static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:409:30: note: perform multiplication in a wider type
+  409 |             d->buffer.resize(BUFFER_SIZE);
+      |                              ^
+      |                              static_cast<qsizetype>(
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:411:24: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  411 |             int size = filter->device()->read(d->buffer.data(), d->buffer.size());
+      |                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:507:27: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  507 |             int towrite = d->buffer.size() - filter->outBufferAvailable();
+      |                           ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:510:28: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  510 |                 int size = filter->device()->write(d->buffer.data(), towrite);
+      |                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:523:30: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  523 |             d->buffer.resize(BUFFER_SIZE);
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:523:30: note: make conversion explicit to silence this warning
+  523 |             d->buffer.resize(BUFFER_SIZE);
+      |                              ^          
+      |                              static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:523:30: note: perform multiplication in a wider type
+  523 |             d->buffer.resize(BUFFER_SIZE);
+      |                              ^
+      |                              static_cast<qsizetype>(
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:21: note: expanded from macro 'BUFFER_SIZE'
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:546:11: warning: suspicious #include of file with '.cpp' extension [bugprone-suspicious-include]
+  546 | #include "moc_kcompressiondevice.cpp"
+      |           ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.h:8:9: warning: declaration uses identifier '__kcompressiondevice_h', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __kcompressiondevice_h
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+      |         _kcompressiondevice_h
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:8:9: warning: declaration uses identifier '__kcompressiondevice_p_h', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __kcompressiondevice_p_h
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         _kcompressiondevice_p_h
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:10:23: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+   10 | #define BUFFER_SIZE 8 * 1024
+      |                       ^     
+      |                     (       )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice_p.h:11:28: warning: macro replacement list should be enclosed in parentheses [bugprone-macro-parentheses]
+   11 | #define SEEK_BUFFER_SIZE 3 * BUFFER_SIZE
+      |                            ^            
+      |                          (              )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kfilterbase.h:8:9: warning: declaration uses identifier '__kfilterbase__h', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __kfilterbase__h
+      |         ^~~~~~~~~~~~~~~~
+      |         _kfilterbase_h
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:159:13: warning: narrowing conversion from 'uInt' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  159 |     int i = d->zStream.avail_in;
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:160:12: warning: an assignment within an 'if' condition is bug-prone [bugprone-assignment-in-if-condition]
+  160 |     if ((i -= 10) < 0) {
+      |          ~~^~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:160:12: note: if it should be an assignment, move it out of the 'if' condition
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:160:12: note: if it is meant to be an equality check, change '=' to '=='
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:196:13: warning: narrowing conversion from 'uInt' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  196 |     int i = d->zStream.avail_out;
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:210:22: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  210 |     int headerSize = p - d->zStream.next_out;
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:225:13: warning: narrowing conversion from 'uInt' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  225 |     int i = d->zStream.avail_out;
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:230:10: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  230 |     i -= p - d->zStream.next_out;
+      |          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:251:12: warning: narrowing conversion from 'uInt' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  251 |     return d->zStream.avail_in;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:255:12: warning: narrowing conversion from 'uInt' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  255 |     return d->zStream.avail_out;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:264:17: warning: narrowing conversion from 'uInt' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  264 |         int n = (d->zStream.avail_in < d->zStream.avail_out) ? d->zStream.avail_in : d->zStream.avail_out;
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:278:23: warning: repeated branch body in conditional chain [bugprone-branch-clone]
+  278 |     if (d->mode == 0) {
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:281:6: note: end of the original
+  281 |     } else if (d->mode == QIODevice::WriteOnly) {
+      |      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:281:49: note: clone 1 starts here
+  281 |     } else if (d->mode == QIODevice::WriteOnly) {
+      |                                                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.h:8:9: warning: declaration uses identifier '__kgzipfilter__h', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __kgzipfilter__h
+      |         ^~~~~~~~~~~~~~~~
+      |         _kgzipfilter_h
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp:16:52: warning: 2 adjacent parameters of 'KLimitedIODevice' of similar type ('qint64') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+   16 | KLimitedIODevice::KLimitedIODevice(QIODevice *dev, qint64 start, qint64 length)
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp:16:59: note: the first parameter in the range is 'start'
+   16 | KLimitedIODevice::KLimitedIODevice(QIODevice *dev, qint64 start, qint64 length)
+      |                                                           ^~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp:16:73: note: the last parameter in the range is 'length'
+   16 | KLimitedIODevice::KLimitedIODevice(QIODevice *dev, qint64 start, qint64 length)
+      |                                                                         ^~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp:87:11: warning: suspicious #include of file with '.cpp' extension [bugprone-suspicious-include]
+   87 | #include "moc_klimitediodevice_p.cpp"
+      |           ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klzfilter.cpp:150:12: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  150 |     return d->zStream.avail_in;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klzfilter.cpp:155:12: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  155 |     return d->zStream.avail_out;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/knonefilter.cpp:75:20: warning: narrowing conversion from 'uint' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+   75 |     d->avail_out = maxlen;
+      |                    ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/knonefilter.cpp:82:19: warning: narrowing conversion from 'uint' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+   82 |     d->avail_in = size;
+      |                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/knonefilter.h:11:9: warning: declaration uses identifier '__knonefilter__h', which is a reserved identifier [bugprone-reserved-identifier]
+   11 | #define __knonefilter__h
+      |         ^~~~~~~~~~~~~~~~
+      |         _knonefilter_h
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:70:12: warning: 2 adjacent parameters of 'KTar' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+   70 | KTar::KTar(const QString &fileName, const QString &_mimetype)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:70:27: note: the first parameter in the range is 'fileName'
+   70 | KTar::KTar(const QString &fileName, const QString &_mimetype)
+      |                           ^~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:70:52: note: the last parameter in the range is '_mimetype'
+   70 | KTar::KTar(const QString &fileName, const QString &_mimetype)
+      |                                                    ^~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:205:13: warning: function 'strncmp' is called without explicitly comparing result [bugprone-suspicious-string-compare]
+  205 |         if (strncmp(buffer + 257, "ustar", 5)) {
+      |             ^                                
+      |                                               != 0
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:224:17: warning: function 'strncmp' is called without explicitly comparing result [bugprone-suspicious-string-compare]
+  224 |             if (strncmp(buffer + 148 + 6 - s.length(), s.data(), s.length()) //
+      |                 ^
+      |                                                                              != 0
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:226:20: warning: function 'strncmp' is called without explicitly comparing result [bugprone-suspicious-string-compare]
+  226 |                 && strncmp(buffer + 148 + 8 - s.length(), s.data(), s.length())) {
+      |                    ^                                                           
+      |                                                                                 != 0
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:263:25: warning: narrowing conversion from 'long long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  263 |         int chunksize = qMin(size, 0x200LL);
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:272:22: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  272 |     const int skip = 0x200 - (n % 0x200);
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:278:23: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  278 |     longlink.truncate(qstrlen(longlink.constData()));
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:297:17: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+  297 |                 switch (typeflag) {
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:316:66: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  316 |         name = QFile::decodeName(QByteArray::fromRawData(buffer, qstrnlen(buffer, 100)));
+      |                                                                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:320:76: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'qsizetype' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  320 |         symlink = QFile::decodeName(QByteArray::fromRawData(symlinkBuffer, qstrnlen(symlinkBuffer, 100)));
+      |                                                                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:347:19: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  347 |     buffer.resize(8 * 1024);
+      |                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:347:19: note: make conversion explicit to silence this warning
+   19 |     buffer.resize(8 * 1024);
+      |                   ^~~~~~~~
+      |                   static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:347:19: note: perform multiplication in a wider type
+  347 |     buffer.resize(8 * 1024);
+      |                   ^
+      |                   static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:428:29: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  428 |             const int pos = name.lastIndexOf(QLatin1Char('/'));
+      |                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:438:26: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  438 |             int access = strtol(p, &dummy, 8);
+      |                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:443:33: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  443 |             const int userLen = qstrnlen(userStart, maxUserGroupLength);
+      |                                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:446:34: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  446 |             const int groupLen = qstrnlen(groupStart, maxUserGroupLength);
+      |                                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:600:19: warning: performing an implicit widening conversion to type 'qsizetype' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  600 |     buffer.resize(8 * 1024);
+      |                   ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:600:19: note: make conversion explicit to silence this warning
+  600 |     buffer.resize(8 * 1024);
+      |                   ^~~~~~~~
+      |                   static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:600:19: note: perform multiplication in a wider type
+  600 |     buffer.resize(8 * 1024);
+      |                   ^
+      |                   static_cast<qsizetype>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:640:16: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  640 |     int rest = size % 0x200;
+      |                ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:761:25: warning: narrowing conversion from 'long long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  761 |         int chunksize = qMin(namelen, 0x200LL);
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:776:29: warning: 2 adjacent parameters of 'doPrepareWriting' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  776 | bool KTar::doPrepareWriting(const QString &name,
+      |                             ^~~~~~~~~~~~~~~~~~~~
+  777 |                             const QString &user,
+      |                             ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:776:44: note: the first parameter in the range is 'name'
+  776 | bool KTar::doPrepareWriting(const QString &name,
+      |                                            ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:777:44: note: the last parameter in the range is 'user'
+  777 |                             const QString &user,
+      |                                            ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:779:29: warning: 2 adjacent parameters of 'doPrepareWriting' of convertible types are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  779 |                             qint64 size,
+      |                             ^~~~~~~~~~~~
+  780 |                             mode_t perm,
+      |                             ~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:779:36: note: the first parameter in the range is 'size'
+  779 |                             qint64 size,
+      |                                    ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:780:36: note: the last parameter in the range is 'perm'
+  780 |                             mode_t perm,
+      |                                    ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:779:29: note: 
+  779 |                             qint64 size,
+      |                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:780:29: note: 'qint64' and 'mode_t' may be implicitly converted: 'qint64' (as 'long long') -> 'mode_t' (as 'unsigned int'), 'mode_t' (as 'unsigned int') -> 'qint64' (as 'long long')
+  780 |                             mode_t perm,
+      |                             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:860:23: warning: 2 adjacent parameters of 'doWriteDir' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  860 | bool KTar::doWriteDir(const QString &name,
+      |                       ^~~~~~~~~~~~~~~~~~~~
+  861 |                       const QString &user,
+      |                       ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:860:38: note: the first parameter in the range is 'name'
+  860 | bool KTar::doWriteDir(const QString &name,
+      |                                      ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:861:38: note: the last parameter in the range is 'user'
+  861 |                       const QString &user,
+      |                                      ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:928:27: warning: 3 adjacent parameters of 'doWriteSymLink' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  928 | bool KTar::doWriteSymLink(const QString &name,
+      |                           ^~~~~~~~~~~~~~~~~~~~
+  929 |                           const QString &target,
+      |                           ~~~~~~~~~~~~~~~~~~~~~~
+  930 |                           const QString &user,
+      |                           ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:928:42: note: the first parameter in the range is 'name'
+  928 | bool KTar::doWriteSymLink(const QString &name,
+      |                                          ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/ktar.cpp:930:42: note: the last parameter in the range is 'user'
+  930 |                           const QString &user,
+      |                                          ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kxzfilter.cpp:235:12: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  235 |     return d->zStream.avail_in;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kxzfilter.cpp:240:12: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  240 |     return d->zStream.avail_out;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:144:17: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [bugprone-signed-char-misuse]
+  144 |     int flags = *buffer; // read flags
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:321:13: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  321 |     int n = dev->peek(header.data(), header.size());
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:331:21: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  331 |                 n = dev->peek(header.data(), minSize);
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:337:13: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  337 |         n = dev->peek(header.data(), header.size());
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:363:53: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  363 |             const qint64 compressedSize = isZip64 ? parseUi64(header.constData() + 8) //
+      |                                                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:364:53: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  364 |                                                   : parseUi32(header.constData() + 8);
+      |                                                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:481:17: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  481 |         int n = dev->read(buffer, 4);
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:507:17: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  507 |             n = dev->read(buffer, 26);
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:555:17: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  555 |             n = dev->read(buffer, handledextralen);
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:616:25: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  616 |                     n = dev->peek(buffer, 4);
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:653:17: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  653 |             n = dev->read(buffer + 4, 42);
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:677:60: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  677 |                                    .arg(namelen, extralen, dev->pos() - varData.size()));
+      |                                                            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:720:33: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  720 |             qint64 dataoffset = localheaderoffset + pfi.dataoffset;
+      |                                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:724:40: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  724 |                     expectedStartPos = d->m_startPos;
+      |                                        ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:729:30: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  729 |                 dataoffset = localheaderoffset + pfi.dataoffset + d->m_startPos;
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:754:23: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  754 |             int pos = name.lastIndexOf(QLatin1Char('/'));
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784:137: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  784 |                     new KZipFileEntry(this, entryName, access, mtime, rootDir()->user(), rootDir()->group(), symlink, name, dataoffset, ucsize, cmethod, csize);
+      |                                                                                                                                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784:154: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  784 |                     new KZipFileEntry(this, entryName, access, mtime, rootDir()->user(), rootDir()->group(), symlink, name, dataoffset, ucsize, cmethod, csize);
+      |                                                                                                                                                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:785:69: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+  785 |                 static_cast<KZipFileEntry *>(entry)->setHeaderStart(localheaderoffset);
+      |                                                                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:836:34: warning: performing an implicit widening conversion to type 'qint64' (aka 'long long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result]
+  836 |                 if (dev->pos() > 4 * 1024 * 1024) {
+      |                                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:836:34: note: make conversion explicit to silence this warning
+   22 |                 if (dev->pos() > 4 * 1024 * 1024) {
+      |                                  ^~~~~~~~~~~~~~~
+      |                                  static_cast<qint64>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:836:34: note: perform multiplication in a wider type
+  836 |                 if (dev->pos() > 4 * 1024 * 1024) {
+      |                                  ^~~~~~~~
+      |                                  static_cast<qint64>( )
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:888:23: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  888 |         int mysize1 = entry->compressedSize();
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:894:23: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  894 |         int myusize = entry->size();
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:914:32: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  914 |         const int bufferSize = extra_field_len + path.length() + 46;
+      |                                ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:942:23: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  942 |         int mysize1 = entry->compressedSize();
+      |                       ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:948:22: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  948 |         int mysize = entry->size();
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:963:21: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  963 |         int myhst = entry->headerStart();
+      |                     ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1015:17: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1015 |     int count = d->m_fileList.count();
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1024:18: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1024 |     int cdsize = centraldirendoffset - centraldiroffset;
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1049:23: warning: 2 adjacent parameters of 'doWriteDir' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 1049 | bool KZip::doWriteDir(const QString &name,
+      |                       ^~~~~~~~~~~~~~~~~~~~
+ 1050 |                       const QString &user,
+      |                       ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1049:38: note: the first parameter in the range is 'name'
+ 1049 | bool KZip::doWriteDir(const QString &name,
+      |                                      ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1050:38: note: the last parameter in the range is 'user'
+ 1050 |                       const QString &user,
+      |                                      ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1095:25: warning: narrowing conversion from 'quint64' (aka 'unsigned long long') to signed type 'qint64' (aka 'long long') is implementation-defined [bugprone-narrowing-conversions]
+ 1095 |     if (!device()->seek(d->m_offset)) {
+      |                         ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1107:13: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1107 |     int i = name.lastIndexOf(QLatin1Char('/'));
+      |             ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1138:42: warning: narrowing conversion from 'mode_t' (aka 'unsigned int') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1138 |                                          perm,
+      |                                          ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1164:22: warning: narrowing conversion from 'qsizetype' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1164 |     int bufferSize = extra_field_len + encodedName.length() + 30;
+      |                      ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1199:18: warning: narrowing conversion from 'uchar' (aka 'unsigned char') to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1199 |     buffer[26] = (uchar)(encodedName.length()); // fileName length
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1200:18: warning: narrowing conversion from 'uchar' (aka 'unsigned char') to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1200 |     buffer[27] = (uchar)(encodedName.length() >> 8);
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1202:18: warning: narrowing conversion from 'uchar' (aka 'unsigned char') to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1202 |     buffer[28] = (uchar)(extra_field_len); // extra field length
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1203:18: warning: narrowing conversion from 'uchar' (aka 'unsigned char') to signed type 'char' is implementation-defined [bugprone-narrowing-conversions]
+ 1203 |     buffer[29] = (uchar)(extra_field_len >> 8);
+      |                  ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1285:17: warning: narrowing conversion from 'qint64' (aka 'long long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+ 1285 |     int csize = device()->pos() - d->m_currentFile->headerStart() - 30 - encodedName.length() - extra_field_len;
+      |                 ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1301:27: warning: 2 adjacent parameters of 'doWriteSymLink' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 1301 | bool KZip::doWriteSymLink(const QString &name,
+      |                           ^~~~~~~~~~~~~~~~~~~~
+ 1302 |                           const QString &target,
+      |                           ~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1301:42: note: the first parameter in the range is 'name'
+ 1301 | bool KZip::doWriteSymLink(const QString &name,
+      |                                          ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1302:42: note: the last parameter in the range is 'target'
+ 1302 |                           const QString &target,
+      |                                          ^~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1411:30: warning: 2 adjacent parameters of 'KZipFileEntry' of similar type ('const QString &') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 1411 |                              const QString &symlink,
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+ 1412 |                              const QString &path,
+      |                              ~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1411:45: note: the first parameter in the range is 'symlink'
+ 1411 |                              const QString &symlink,
+      |                                             ^~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1412:45: note: the last parameter in the range is 'path'
+ 1412 |                              const QString &path,
+      |                                             ^~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1414:30: warning: 3 adjacent parameters of 'KZipFileEntry' of convertible types are easily swapped by mistake [bugprone-easily-swappable-parameters]
+ 1414 |                              qint64 uncompressedSize,
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+ 1415 |                              int encoding,
+      |                              ~~~~~~~~~~~~~
+ 1416 |                              qint64 compressedSize)
+      |                              ~~~~~~~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1414:37: note: the first parameter in the range is 'uncompressedSize'
+ 1414 |                              qint64 uncompressedSize,
+      |                                     ^~~~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1416:37: note: the last parameter in the range is 'compressedSize'
+ 1416 |                              qint64 compressedSize)
+      |                                     ^~~~~~~~~~~~~~
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1414:30: note: 
+ 1414 |                              qint64 uncompressedSize,
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1415:30: note: 'qint64' and 'int' may be implicitly converted: 'qint64' (as 'long long') -> 'int', 'int' -> 'qint64' (as 'long long')
+ 1415 |                              int encoding,
+      |                              ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzstdfilter.cpp:103:12: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  103 |     return d->inBuffer.size - d->inBuffer.pos;
+      |            ^
+/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzstdfilter.cpp:108:12: warning: narrowing conversion from 'size_t' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+  108 |     return d->outBuffer.size - d->outBuffer.pos;
+      |            ^
+Suppressed 567150 warnings (567150 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

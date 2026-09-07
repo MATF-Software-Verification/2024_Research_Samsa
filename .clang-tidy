@@ -1,0 +1,12 @@
+---
+Checks: 'bugprone-*,
+         modernize-*,
+         performance-*,
+         readability-container-size-empty,
+         readability-named-parameter,
+         readability-redundant-control-flow'
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+CheckOptions:
+  - key:             modernize-use-nullptr.nullptr_macro
+    value:           'NULL'
