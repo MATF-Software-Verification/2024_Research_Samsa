@@ -28,11 +28,11 @@
 530169 warnings generated.
 [15/15] Processing file /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzstdfilter.cpp.
 567390 warnings generated.
-/home/lemon/Desktop/Projects/2024_Research_Samsa/build_tidy/src/karchive_export.h:107:61: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+/home/lemon/Desktop/Projects/2024_Research_Samsa/build-tidy/vendor/karchive/src/karchive_export.h:107:61: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
   107 | #  define KARCHIVE_ENABLE_DEPRECATED_SINCE(major, minor) (((major<<16)|(minor<<8)) > KARCHIVE_DISABLE_DEPRECATED_BEFORE_AND_AT)
       |                                                             ^    
       |                                                             (    )
-/home/lemon/Desktop/Projects/2024_Research_Samsa/build_tidy/src/karchive_export.h:107:73: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+/home/lemon/Desktop/Projects/2024_Research_Samsa/build-tidy/vendor/karchive/src/karchive_export.h:107:73: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
   107 | #  define KARCHIVE_ENABLE_DEPRECATED_SINCE(major, minor) (((major<<16)|(minor<<8)) > KARCHIVE_DISABLE_DEPRECATED_BEFORE_AND_AT)
       |                                                                         ^    
       |                                                                         (    )
