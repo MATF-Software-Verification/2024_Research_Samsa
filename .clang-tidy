@@ -1,12 +1,50 @@
 ---
+# clang-tidy configuration for the KArchive analysis.
+#
+# Rationale for the check selection is in clang_tidy/TRIAGE.md. In short: the
+# bugprone-* family is the reason clang-tidy is in this analysis at all, since
+# KArchive parses untrusted binary input and its real upstream bug history is
+# malformed-archive handling. modernize-* and performance-* are kept because
+# the codebase has been ported Qt4 -> Qt5 -> Qt6 and carries older idioms.
+#
+# Two checks are switched off deliberately; both were measured first rather
+# than assumed:
+#
+#   modernize-use-trailing-return-type
+#       457 of 1011 findings (45%) on this codebase. It is a pure stylistic
+#       preference for `auto f() -> int` over `int f()`, carries no defect
+#       risk, and KDE's own style does not use it. Leaving it on drowns the
+#       findings that matter.
+#
+#   bugprone-easily-swappable-parameters
+#       22 findings, all on ordinary two-argument functions taking the same
+#       type. It flags a design smell rather than a defect and cannot be acted
+#       on without changing public API.
+#
+# HeaderFilterRegex is scoped to the analysed sources. The default '.*' pulled
+# in generated headers from the build directory (karchive_export.h), whose
+# macro warnings are about ECM's code generator, not about KArchive.
+#
+# The value below is the intent, but it cannot fully express it on its own: a
+# CMake build directory mirrors the source layout, so the generated headers
+# live in <build>/vendor/karchive/src/ and match this pattern too. clang-tidy
+# 18 has no negative-match filter (ExcludeHeaderFilterRegex arrived in 19), so
+# run_clang_tidy.sh passes --header-filter anchored at the absolute source
+# path. That narrows the path only; it never changes which checks run.
+
 Checks: 'bugprone-*,
          modernize-*,
          performance-*,
          readability-container-size-empty,
          readability-named-parameter,
-         readability-redundant-control-flow'
+         readability-redundant-control-flow,
+         -modernize-use-trailing-return-type,
+         -bugprone-easily-swappable-parameters'
+
 WarningsAsErrors: ''
-HeaderFilterRegex: '.*'
+
+HeaderFilterRegex: '.*/vendor/karchive/src/.*'
+
 CheckOptions:
   - key:             modernize-use-nullptr.nullptr_macro
     value:           'NULL'

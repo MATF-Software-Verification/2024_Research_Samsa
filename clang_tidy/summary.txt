@@ -1,0 +1,62 @@
+clang-tidy findings: 497
+
+By severity
+    497  warning
+
+By check
+    140  bugprone-narrowing-conversions
+     82  modernize-use-nodiscard
+     62  modernize-use-default-member-init
+     29  modernize-macro-to-enum
+     27  modernize-avoid-c-arrays
+     27  readability-named-parameter
+     23  modernize-loop-convert
+     20  modernize-return-braced-init-list
+     20  modernize-use-auto
+     13  modernize-deprecated-headers
+     11  bugprone-implicit-widening-of-multiplication-result
+      8  performance-enum-size
+      8  modernize-pass-by-value
+      6  bugprone-reserved-identifier
+      5  modernize-use-equals-default
+      3  bugprone-macro-parentheses
+      3  bugprone-signed-char-misuse
+      3  bugprone-suspicious-string-compare
+      2  bugprone-switch-missing-default-case
+      2  bugprone-branch-clone
+      2  bugprone-suspicious-include
+      1  bugprone-assignment-in-if-condition
+
+By file
+    197  vendor/karchive/src/k7zip.cpp
+     59  vendor/karchive/src/kzip.cpp
+     32  vendor/karchive/src/ktar.cpp
+     25  vendor/karchive/src/karchive.cpp
+     19  vendor/karchive/src/kgzipfilter.cpp
+     18  vendor/karchive/src/kcompressiondevice.cpp
+     10  vendor/karchive/src/krcc.cpp
+     10  vendor/karchive/src/kxzfilter.cpp
+      9  vendor/karchive/src/karchivedirectory.h
+      9  vendor/karchive/src/karchiveentry.h
+      9  vendor/karchive/src/kfilterbase.h
+      7  vendor/karchive/src/kcompressiondevice.h
+      7  vendor/karchive/src/klzfilter.cpp
+      7  vendor/karchive/src/knonefilter.cpp
+      7  vendor/karchive/src/kxzfilter.h
+      7  vendor/karchive/src/kzipfileentry.h
+      6  vendor/karchive/src/karchive.h
+      6  vendor/karchive/src/karchivefile.h
+      6  vendor/karchive/src/kbzip2filter.h
+      5  vendor/karchive/src/kar.cpp
+      5  vendor/karchive/src/kgzipfilter.h
+      5  vendor/karchive/src/klimitediodevice_p.h
+      5  vendor/karchive/src/kzstdfilter.h
+      4  vendor/karchive/src/kfilterbase.cpp
+      4  vendor/karchive/src/klzfilter.h
+      4  vendor/karchive/src/knonefilter.h
+      4  vendor/karchive/src/kzip.h
+      3  vendor/karchive/src/kbzip2filter.cpp
+      3  vendor/karchive/src/kcompressiondevice_p.h
+      3  vendor/karchive/src/kzstdfilter.cpp
+      1  vendor/karchive/src/k7zip.h
+      1  vendor/karchive/src/klimitediodevice.cpp
