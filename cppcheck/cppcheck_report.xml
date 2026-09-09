@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/kxzfilter.cpp">
+            <location file="vendor/karchive/src/kxzfilter.cpp" line="224" column="27"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/kxzfilter.cpp">
+            <location file="vendor/karchive/src/kxzfilter.cpp" line="230" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;init&apos; argument 3 names different: declaration &apos;props&apos; definition &apos;properties&apos;." verbose="Function &apos;init&apos; argument 3 names different: declaration &apos;props&apos; definition &apos;properties&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/kxzfilter.cpp">
+            <location file="vendor/karchive/src/kxzfilter.cpp" line="61" column="71"/>
+            <location file="vendor/karchive/src/kxzfilter.h" line="43" column="67"/>
+            <symbol>init</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/klzfilter.cpp">
+            <location file="vendor/karchive/src/klzfilter.cpp" line="139" column="27"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/klzfilter.cpp">
+            <location file="vendor/karchive/src/klzfilter.cpp" line="145" column="26"/>
+        </error>
+        <error id="danglingLifetime" severity="error" msg="Non-local variable &apos;d-&gt;buffer&apos; will use object that points to local variable &apos;inBuffer&apos;." verbose="Non-local variable &apos;d-&gt;buffer&apos; will use object that points to local variable &apos;inBuffer&apos;." cwe="562" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2630" column="6"/>
+            <location file="vendor/karchive/src/k7zip.cpp" line="2622" column="16" info="Variable created here."/>
+            <location file="vendor/karchive/src/k7zip.cpp" line="2630" column="30" info="Pointer to container is created here."/>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;K7Zip&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;K7Zip&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="564" column="7"/>
+            <symbol>K7Zip</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;K7Zip&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;K7Zip&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="564" column="7"/>
+            <symbol>K7Zip</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;K7ZipFileEntry&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;K7ZipFileEntry&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="231" column="7"/>
+            <symbol>K7ZipFileEntry</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;K7ZipFileEntry&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;K7ZipFileEntry&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="231" column="7"/>
+            <symbol>K7ZipFileEntry</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;K7Zip&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;K7Zip&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.h" line="19" column="5" info="Derived function &apos;K7Zip::tr&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::tr&apos;"/>
+            <symbol>K7Zip</symbol>
+            <symbol>tr</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;K7Zip&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;K7Zip&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.h" line="19" column="5" info="Derived function &apos;K7Zip::trUtf8&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::trUtf8&apos;"/>
+            <symbol>K7Zip</symbol>
+            <symbol>trUtf8</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;KArchivePrivate&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;KArchivePrivate&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/karchive_p.h" line="24" column="5"/>
+            <symbol>KArchivePrivate</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;RangeDecoder&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;RangeDecoder&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1444" column="5"/>
+            <symbol>RangeDecoder</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1373" column="22"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1374" column="20"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1406" column="62"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1414" column="32"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1420" column="34"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1950" column="36"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2001" column="37"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2308" column="34"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2543" column="29"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2544" column="24"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2553" column="24"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2599" column="28"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2637" column="20"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="3085" column="34"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="3154" column="38"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;type&apos; can be reduced." verbose="The scope of the variable &apos;type&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1202" column="13"/>
+            <symbol>type</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;temp&apos; can be reduced." verbose="The scope of the variable &apos;temp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1816" column="17"/>
+            <symbol>temp</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;deflatedData&apos; can be reduced." verbose="The scope of the variable &apos;deflatedData&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1868" column="20"/>
+            <symbol>deflatedData</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;K7Zip&apos; argument 1 names different: declaration &apos;filename&apos; definition &apos;fileName&apos;." verbose="Function &apos;K7Zip&apos; argument 1 names different: declaration &apos;filename&apos; definition &apos;fileName&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="556" column="29"/>
+            <location file="vendor/karchive/src/k7zip.h" line="28" column="35"/>
+            <symbol>K7Zip</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="822" column="22" info="Shadow variable"/>
+            <location file="vendor/karchive/src/k7zip.cpp" line="781" column="14" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="1637" column="22" info="Shadow variable"/>
+            <location file="vendor/karchive/src/k7zip.cpp" line="1604" column="17" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;type&apos; shadows outer variable" verbose="Local variable &apos;type&apos; shadows outer variable" cwe="398" file0="vendor/karchive/src/k7zip.cpp">
+            <location file="vendor/karchive/src/k7zip.cpp" line="2748" column="19" info="Shadow variable"/>
+            <location file="vendor/karchive/src/k7zip.cpp" line="2644" column="9" info="Shadowed declaration"/>
+            <symbol>type</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KArchive&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchive&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="148" column="7"/>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KArchive&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchive&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="148" column="7"/>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KArchiveEntry&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchiveEntry&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="729" column="7"/>
+            <symbol>KArchiveEntry</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KArchiveEntry&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchiveEntry&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="729" column="7"/>
+            <symbol>KArchiveEntry</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KArchiveDirectory&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchiveDirectory&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="923" column="7"/>
+            <symbol>KArchiveDirectory</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KArchiveDirectory&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchiveDirectory&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="923" column="7"/>
+            <symbol>KArchiveDirectory</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KArchiveFile&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchiveFile&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="809" column="7"/>
+            <symbol>KArchiveFile</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KArchiveFile&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KArchiveFile&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="809" column="7"/>
+            <symbol>KArchiveFile</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;KArchiveDirectoryPrivate&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;KArchiveDirectoryPrivate&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="52" column="5"/>
+            <symbol>KArchiveDirectoryPrivate</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;symLinkTarget.isEmpty()&apos; is always true" verbose="Condition &apos;symLinkTarget.isEmpty()&apos; is always true" cwe="571" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="319" column="34" info="Condition &apos;symLinkTarget.isEmpty()&apos; is always true"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KArchiveEntry&apos; argument 1 names different: declaration &apos;archive&apos; definition &apos;t&apos;." verbose="Function &apos;KArchiveEntry&apos; argument 1 names different: declaration &apos;archive&apos; definition &apos;t&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="722" column="40"/>
+            <location file="vendor/karchive/src/karchiveentry.h" line="58" column="29"/>
+            <symbol>KArchiveEntry</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KArchiveFile&apos; argument 1 names different: declaration &apos;archive&apos; definition &apos;t&apos;." verbose="Function &apos;KArchiveFile&apos; argument 1 names different: declaration &apos;archive&apos; definition &apos;t&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="799" column="38"/>
+            <location file="vendor/karchive/src/karchivefile.h" line="39" column="28"/>
+            <symbol>KArchiveFile</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KArchiveDirectory&apos; argument 1 names different: declaration &apos;archive&apos; definition &apos;t&apos;." verbose="Function &apos;KArchiveDirectory&apos; argument 1 names different: declaration &apos;archive&apos; definition &apos;t&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="915" column="48"/>
+            <location file="vendor/karchive/src/karchivedirectory.h" line="52" column="33"/>
+            <symbol>KArchiveDirectory</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;entry&apos; argument 1 names different: declaration &apos;name&apos; definition &apos;_name&apos;." verbose="Function &apos;entry&apos; argument 1 names different: declaration &apos;name&apos; definition &apos;_name&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="937" column="62"/>
+            <location file="vendor/karchive/src/karchivedirectory.h" line="81" column="47"/>
+            <symbol>entry</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;copyTo&apos; argument 2 names different: declaration &apos;recursive&apos; definition &apos;recursiveCopy&apos;." verbose="Function &apos;copyTo&apos; argument 2 names different: declaration &apos;recursive&apos; definition &apos;recursiveCopy&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="1006" column="58"/>
+            <location file="vendor/karchive/src/karchivedirectory.h" line="163" column="43"/>
+            <symbol>copyTo</symbol>
+        </error>
+        <error id="shadowFunction" severity="style" msg="Local variable &apos;fileName&apos; shadows outer function" verbose="Local variable &apos;fileName&apos; shadows outer function" cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="380" column="27" info="Shadow variable"/>
+            <location file="vendor/karchive/src/karchive.h" line="117" column="13" info="Shadowed declaration"/>
+            <symbol>fileName</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;directory&apos; can be declared as pointer to const" verbose="Parameter &apos;directory&apos; can be declared as pointer to const" cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="65" column="61" info="Parameter &apos;directory&apos; can be declared as pointer to const"/>
+            <symbol>directory</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;file&apos; can be declared as pointer to const" verbose="Variable &apos;file&apos; can be declared as pointer to const" cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="593" column="27" info="Variable &apos;file&apos; can be declared as pointer to const"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;entry&apos; can be declared as pointer to const" verbose="Parameter &apos;entry&apos; can be declared as pointer to const" cwe="398" file0="vendor/karchive/src/karchive.cpp">
+            <location file="vendor/karchive/src/karchive.cpp" line="976" column="54" info="Parameter &apos;entry&apos; can be declared as pointer to const"/>
+            <symbol>entry</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KAr&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KAr&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/kar.cpp">
+            <location file="vendor/karchive/src/kar.cpp" line="39" column="7"/>
+            <symbol>KAr</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KAr&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KAr&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/kar.cpp">
+            <location file="vendor/karchive/src/kar.cpp" line="39" column="7"/>
+            <symbol>KAr</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KAr&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KAr&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/kar.cpp">
+            <location file="vendor/karchive/src/kar.h" line="23" column="5" info="Derived function &apos;KAr::tr&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::tr&apos;"/>
+            <symbol>KAr</symbol>
+            <symbol>tr</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KAr&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KAr&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/kar.cpp">
+            <location file="vendor/karchive/src/kar.h" line="23" column="5" info="Derived function &apos;KAr::trUtf8&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::trUtf8&apos;"/>
+            <symbol>KAr</symbol>
+            <symbol>trUtf8</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;The header file &apos;kcompressiondevice.h&apos; doesn&apos;t include &lt;QObject&gt;.&quot;" verbose="#error &quot;The header file &apos;kcompressiondevice.h&apos; doesn&apos;t include &lt;QObject&gt;.&quot;">
+            <location file="build-analysis/vendor/karchive/src/KF6Archive_autogen/include/moc_kcompressiondevice.cpp" line="19" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563" file0="vendor/karchive/src/kgzipfilter.cpp">
+            <location file="vendor/karchive/src/kgzipfilter.cpp" line="160" column="12"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;The header file &apos;klimitediodevice_p.h&apos; doesn&apos;t include &lt;QObject&gt;.&quot;" verbose="#error &quot;The header file &apos;klimitediodevice_p.h&apos; doesn&apos;t include &lt;QObject&gt;.&quot;">
+            <location file="build-analysis/vendor/karchive/src/KF6Archive_autogen/include/moc_klimitediodevice_p.cpp" line="19" column="0"/>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KTar&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KTar&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.cpp" line="87" column="7"/>
+            <symbol>KTar</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KTar&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KTar&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.cpp" line="87" column="7"/>
+            <symbol>KTar</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KTar&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KTar&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.h" line="23" column="5" info="Derived function &apos;KTar::tr&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::tr&apos;"/>
+            <symbol>KTar</symbol>
+            <symbol>tr</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KTar&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KTar&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.h" line="23" column="5" info="Derived function &apos;KTar::trUtf8&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::trUtf8&apos;"/>
+            <symbol>KTar</symbol>
+            <symbol>trUtf8</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.cpp" line="601" column="12"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KTar&apos; argument 1 names different: declaration &apos;filename&apos; definition &apos;fileName&apos;." verbose="Function &apos;KTar&apos; argument 1 names different: declaration &apos;filename&apos; definition &apos;fileName&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.cpp" line="70" column="27"/>
+            <location file="vendor/karchive/src/ktar.h" line="39" column="34"/>
+            <symbol>KTar</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KTar&apos; argument 2 names different: declaration &apos;mimetype&apos; definition &apos;_mimetype&apos;." verbose="Function &apos;KTar&apos; argument 2 names different: declaration &apos;mimetype&apos; definition &apos;_mimetype&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/ktar.cpp">
+            <location file="vendor/karchive/src/ktar.cpp" line="70" column="52"/>
+            <location file="vendor/karchive/src/ktar.h" line="39" column="59"/>
+            <symbol>KTar</symbol>
+        </error>
+        <error id="uselessAssignmentPtrArg" severity="warning" msg="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" verbose="Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?" cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="180" column="9"/>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KZipFileEntry&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KZipFileEntry&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="1418" column="7"/>
+            <symbol>KZipFileEntry</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KZipFileEntry&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KZipFileEntry&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="1418" column="7"/>
+            <symbol>KZipFileEntry</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KZip&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KZip&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="441" column="7"/>
+            <symbol>KZip</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KZip&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KZip&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="441" column="7"/>
+            <symbol>KZip</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KZip&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KZip&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.h" line="39" column="5" info="Derived function &apos;KZip::tr&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::tr&apos;"/>
+            <symbol>KZip</symbol>
+            <symbol>tr</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KZip&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KZip&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.h" line="39" column="5" info="Derived function &apos;KZip::trUtf8&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::trUtf8&apos;"/>
+            <symbol>KZip</symbol>
+            <symbol>trUtf8</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="991" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="1352" column="33"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;KZip&apos; argument 1 names different: declaration &apos;filename&apos; definition &apos;fileName&apos;." verbose="Function &apos;KZip&apos; argument 1 names different: declaration &apos;filename&apos; definition &apos;fileName&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="433" column="27"/>
+            <location file="vendor/karchive/src/kzip.h" line="48" column="34"/>
+            <symbol>KZip</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;doPrepareWriting&apos; argument 6 names different: declaration &apos;atime&apos; definition &apos;accessTime&apos;." verbose="Function &apos;doPrepareWriting&apos; argument 6 names different: declaration &apos;atime&apos; definition &apos;accessTime&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="1072" column="46"/>
+            <location file="vendor/karchive/src/kzip.h" line="142" column="44"/>
+            <symbol>doPrepareWriting</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;doPrepareWriting&apos; argument 7 names different: declaration &apos;mtime&apos; definition &apos;modificationTime&apos;." verbose="Function &apos;doPrepareWriting&apos; argument 7 names different: declaration &apos;mtime&apos; definition &apos;modificationTime&apos;." cwe="628" inconclusive="true" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="1073" column="46"/>
+            <location file="vendor/karchive/src/kzip.h" line="143" column="44"/>
+            <symbol>doPrepareWriting</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;buffer&apos; shadows outer variable" verbose="Local variable &apos;buffer&apos; shadows outer variable" cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="915" column="15" info="Shadow variable"/>
+            <location file="vendor/karchive/src/kzip.cpp" line="866" column="10" info="Shadowed declaration"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;entry&apos; can be declared as pointer to const" verbose="Variable &apos;entry&apos; can be declared as pointer to const" cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="872" column="25" info="Variable &apos;entry&apos; can be declared as pointer to const"/>
+            <symbol>entry</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;entry&apos; can be declared as pointer to const" verbose="Variable &apos;entry&apos; can be declared as pointer to const" cwe="398" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="907" column="25" info="Variable &apos;entry&apos; can be declared as pointer to const"/>
+            <symbol>entry</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;buffer&apos; is assigned a value that is never used." verbose="Variable &apos;buffer&apos; is assigned a value that is never used." cwe="563" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="180" column="16"/>
+            <symbol>buffer</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;startOfFile&apos; is assigned a value that is never used." verbose="Variable &apos;startOfFile&apos; is assigned a value that is never used." cwe="563" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="489" column="25"/>
+            <symbol>startOfFile</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;startOfFile&apos; is assigned a value that is never used." verbose="Variable &apos;startOfFile&apos; is assigned a value that is never used." cwe="563" file0="vendor/karchive/src/kzip.cpp">
+            <location file="vendor/karchive/src/kzip.cpp" line="495" column="25"/>
+            <symbol>startOfFile</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;KRcc&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KRcc&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/krcc.cpp">
+            <location file="vendor/karchive/src/krcc.cpp" line="69" column="7"/>
+            <symbol>KRcc</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;KRcc&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;KRcc&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398" file0="vendor/karchive/src/krcc.cpp">
+            <location file="vendor/karchive/src/krcc.cpp" line="69" column="7"/>
+            <symbol>KRcc</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KRcc&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KRcc&apos; defines member function with name &apos;tr&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/krcc.cpp">
+            <location file="vendor/karchive/src/krcc.h" line="24" column="5" info="Derived function &apos;KRcc::tr&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::tr&apos;"/>
+            <symbol>KRcc</symbol>
+            <symbol>tr</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;KRcc&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." verbose="The class &apos;KRcc&apos; defines member function with name &apos;trUtf8&apos; also defined in its parent class &apos;KArchive&apos;." cwe="398" file0="vendor/karchive/src/krcc.cpp">
+            <location file="vendor/karchive/src/krcc.h" line="24" column="5" info="Derived function &apos;KRcc::trUtf8&apos;"/>
+            <location file="vendor/karchive/src/karchive.h" line="41" column="5" info="Parent function &apos;KArchive::trUtf8&apos;"/>
+            <symbol>KRcc</symbol>
+            <symbol>trUtf8</symbol>
+            <symbol>KArchive</symbol>
+        </error>
+    </errors>
+</results>

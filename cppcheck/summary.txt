@@ -1,0 +1,43 @@
+cppcheck findings: 91 total (12 inconclusive)
+
+By severity
+     55  style
+     33  warning
+      3  error
+
+By check id
+     21  cstyleCast
+     12  funcArgNamesDifferent
+     11  noCopyConstructor
+     11  noOperatorEq
+     10  duplInheritedMember
+      4  variableScope
+      4  shadowVariable
+      4  unreadVariable
+      3  noExplicitConstructor
+      3  constVariablePointer
+      2  constParameterPointer
+      2  preprocessorErrorDirective
+      1  danglingLifetime
+      1  knownConditionTrueFalse
+      1  shadowFunction
+      1  uselessAssignmentPtrArg
+
+By file
+     28  vendor/karchive/src/k7zip.cpp
+     19  vendor/karchive/src/karchive.cpp
+     16  vendor/karchive/src/kzip.cpp
+      5  vendor/karchive/src/ktar.cpp
+      3  vendor/karchive/src/kxzfilter.cpp
+      2  vendor/karchive/src/klzfilter.cpp
+      2  vendor/karchive/src/k7zip.h
+      2  vendor/karchive/src/kar.cpp
+      2  vendor/karchive/src/kar.h
+      2  vendor/karchive/src/ktar.h
+      2  vendor/karchive/src/kzip.h
+      2  vendor/karchive/src/krcc.cpp
+      2  vendor/karchive/src/krcc.h
+      1  vendor/karchive/src/karchive_p.h
+      1  build-analysis/vendor/karchive/src/KF6Archive_autogen/include/moc_kcompressiondevice.cpp
+      1  vendor/karchive/src/kgzipfilter.cpp
+      1  build-analysis/vendor/karchive/src/KF6Archive_autogen/include/moc_klimitediodevice_p.cpp
