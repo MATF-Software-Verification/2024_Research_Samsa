@@ -1,0 +1,6 @@
+#10 0x00007ffff7eab914 in getOutStream (folder=0x50c000000ac0, streamIndex=<optimized out>, seqOutStream=<optimized out>) at qlist.h:453
+#11 0x00007ffff7ea1601 in K7Zip::K7ZipPrivate::readAndDecodePackedStreams (this=0x516000000080, readMainStreamInfo=<optimized out>) at vendor/karchive/src/k7zip.cpp:1842
+#12 0x00007ffff7ec3c2f in K7Zip::openArchive (this=<optimized out>, mode=...) at vendor/karchive/src/k7zip.cpp:2901
+#13 0x00007ffff7efe515 in KArchive::open (this=<optimized out>, mode=...) at vendor/karchive/src/karchive.cpp:192
+#14 0x000055555565fd93 in LLVMFuzzerTestOneInput (data=<optimized out>, size=<optimized out>) at vendor/karchive/autotests/ossfuzz/karchive_fuzzer.cc:60
+#15 0x000055555566472b in main ()

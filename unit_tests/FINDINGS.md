@@ -1,8 +1,9 @@
 # Defects found by the test suites
 
-Two defects in KArchive at commit `633dc09`, both found by the suites in
-`unit_tests/tests/` and both reproduced deterministically. Neither is reported by
-clang-tidy or cppcheck (see `../clang_tidy/TRIAGE.md`, `../cppcheck/TRIAGE.md`).
+Six defects in KArchive at commit `633dc09`, found across the tools of this
+analysis and all reproduced deterministically. Findings 1-4 come from the test
+suites and the memory tools; findings 5-6 come from the AFL++ campaign
+(`../afl/TRIAGE.md`). None is reported by clang-tidy or cppcheck.
 
 | # | Component | Severity | Status |
 |---|---|---|---|
@@ -10,6 +11,8 @@ clang-tidy or cppcheck (see `../clang_tidy/TRIAGE.md`, `../cppcheck/TRIAGE.md`).
 | 2 | `K7Zip` | data corruption — filenames | reproduced, root-caused |
 | 3 | `KZstdFilter` | uninitialised-memory use | reproduced (memcheck), root-caused |
 | 4 | `K7Zip` | memory scales pathologically on write (2.84 GB for 64 MiB) | measured (heaptrack), root-caused |
+| 5 | `K7Zip` | **out-of-bounds read** on malformed stream graph | reproduced (AFL++), minimised to 153 B |
+| 6 | `K7Zip` | **resource-amplification DoS** (153 B → >12 GB RAM) | reproduced (AFL++), root-caused |
 
 ---
 
@@ -257,6 +260,74 @@ archive, which is a larger change than the one-liners in findings 2 and 3.
 ```bash
 ./heaptrack/run_heaptrack.sh
 ```
+
+## 5. K7Zip out-of-bounds read on a malformed stream graph
+
+Found by AFL++. Full triage and stack: `../afl/TRIAGE.md` §"Finding 5";
+minimised reproducer `../afl/crashes/k7z_getOutStream_oob.7z` (153 bytes).
+
+### Symptom
+
+A crafted 7z drives `getOutStream` to index a `QList` past its end while
+parsing the coder stream graph:
+
+```
+QList::at index out of range          qlist.h:453
+K7Zip::readAndDecodePackedStreams     k7zip.cpp:1842
+K7Zip::openArchive                    k7zip.cpp:2901
+```
+
+In this Qt debug build the bounds assertion aborts; with assertions off it is an
+out-of-bounds read.
+
+### Root cause
+
+`findInStream` (k7zip.cpp:375) is `void` and simply falls through when a stream
+index is not found in the coder graph, leaving `coderIndex == folderInfos.size()`
+with no error signalled. The caller then does `folderInfos[coderIndex]`, one past
+the end. Reachable on the plain open path, no password needed.
+
+### Assessment
+
+A memory-safety defect on the untrusted-input path, distinct from findings 1-4:
+the stream-graph helpers were not exercised by the corpus the other tools ran on.
+The fix is to give `findInStream`/`findOutStream` a failure return and check it.
+
+## 6. K7Zip resource-amplification DoS
+
+Found by AFL++ (as "hangs"). Full triage and measurements: `../afl/TRIAGE.md`
+§"Finding 6"; reproducers `../afl/hangs/k7z_amplification_*.7z` (153 bytes each).
+
+> Reproduce only under a memory cap:
+> `ASAN_OPTIONS=hard_rss_limit_mb=2048 timeout 10 <fuzzer> <file>`.
+> Uncapped it can exhaust system RAM.
+
+### Symptom
+
+A 153-byte 7z makes K7Zip consume 8-12 GB of RAM and 28-160 s of CPU before
+aborting with Qt's *"Out of memory"* at `qarraydataops.h:276`.
+
+### Root cause
+
+Attacker-controlled count fields in the 7z header, read as variable-length
+numbers up to 2^64, are used directly to size containers with no check against
+the remaining input length:
+
+```cpp
+folder->folderInfos.reserve(numCoders);          // k7zip.cpp:777
+packCRCsDefined.resize(numPackStreams, false);   // k7zip.cpp:939
+```
+
+A one-byte field claiming ~10^8 coders makes reserve request billions of bytes
+at once. Same class as finding 4's write-side blow-up and as the "infinite loop
+in malformed file" fixes in KArchive's own history.
+
+### Assessment
+
+A denial-of-service on the read path: a tiny hostile archive exhausts the memory
+of any process that opens it (Ark, a KIO slave, a file-manager thumbnailer). The
+defence is to validate declared counts against the actual input size before
+allocating.
 
 ## Status
 
