@@ -321,7 +321,7 @@ void VsRoundTripTest::nonAsciiFilenames_data()
     };
     const QList<NameCase> names = {
         {"latin1-e-acute", QString::fromUtf8("caf\xc3\xa9.txt"), false},
-        {"serbian-c-caron", QString::fromUtf8("\xc4\x8dasopis.txt"), true},
+        {"serbian-c-caron", QString::fromUtf8("\xc4\x8d" "asopis.txt"), true},
         {"cyrillic", QString::fromUtf8("\xd1\x82\xd0\xb5\xd0\xba\xd1\x81\xd1\x82.txt"), true},
         {"cjk", QString::fromUtf8("\xe4\xb8\xad\xe6\x96\x87.txt"), true},
     };
