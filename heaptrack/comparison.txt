@@ -1,0 +1,9 @@
+heaptrack: write then extract 64 x 1 MiB entries (payload 64 MiB)
+target: KArchive 633dc09
+
+format        peak-heap     peak-RSS    allocations       leaked
+tar              11.75M       27.25M         283445       59.72K
+tar.gz           11.66M       27.14M         280264       59.72K
+tar.zst          13.21M       29.12M         280477       59.72K
+zip               4.45M       18.15M           5295       59.72K
+7z                2.84G        2.36G           3513       59.72K

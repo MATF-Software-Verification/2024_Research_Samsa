@@ -1,0 +1,3312 @@
+reading file "/tmp/tmp.YCqaY4wiTr/ht_zip.zst" - please wait, this might take some time...
+Debuggee command was: /tmp/tmp.YCqaY4wiTr/extract_driver zip 1048576 64
+finished reading file, now analyzing data:
+
+MOST CALLS TO ALLOCATION FUNCTIONS
+1082 calls to allocation functions with 4.24M peak consumption from
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper::allocateData
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:139
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:181
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:157
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:211
+64 calls with 2.10M peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::reallocData(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1983
+    QByteArray::resize(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1907
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevice::readAll()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1261
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1481
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:73
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:647
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::encodeName(QString const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:160
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1163
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QUtf8::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:505
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:361
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    toLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1745
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:75
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:647
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::encodeName(QString const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:160
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1163
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::reallocData(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1983
+    QByteArray::resize(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1907
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:264
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1255
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:73
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:647
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::encodeName(QString const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:160
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doFinishWriting(long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1284
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::finishWriting(long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:500
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:426
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 762 from 89 other places
+
+780 calls to allocation functions with 9.81K peak consumption from
+_nl_make_l10nflist
+  at ../intl/l10nflist.c:166
+  in /lib/x86_64-linux-gnu/libc.so.6
+216 calls with 3.03K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+192 calls with 1.23K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+168 calls with 3.37K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+72 calls with 898B peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+24 calls with 154B peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:295
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 108 from 13 other places
+
+463 calls to allocation functions with 4.42K peak consumption from
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper::allocateData
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:139
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:181
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:157
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:220
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    replaceArgEscapes
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:8629
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QString::arg(long long, int, int, QChar) const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:8922
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QString::arg(int, int, int, QChar) const
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:1279
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:58
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2506
+    qulltoa(unsigned long long, int, QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale_tools.cpp:555
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocaleData::longLongToString(long long, int, int, int, unsigned int) const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:4055
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QString::arg(long long, int, int, QChar) const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:8909
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QString::arg(int, int, int, QChar) const
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:1279
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:58
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 2.80K peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:140
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:682
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:164
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:690
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QUtf8::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:684
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:359
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    fromLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1738
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:141
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:682
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:164
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:690
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+27 calls with 0B peak consumption from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QString QStringBuilder<>::convertTo<>() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringbuilder.h:105
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringBuilder<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringbuilder.h:130
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:405
+    loadTranslation
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:80
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:139
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 180 from 116 other places
+
+398 calls to allocation functions with 159B peak consumption from
+__GI___strdup
+  at ./string/strdup.c:42
+  in /lib/x86_64-linux-gnu/libc.so.6
+64 calls with 0B peak consumption from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qLocalTime(long, tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:384
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocalTime::utcToLocal(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:541
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::expressUtcAsLocal(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:2822
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::setMSecsSinceEpoch(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4550
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::fromMSecsSinceEpoch(long long, QTimeZone const&)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5650
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::currentDateTime(QTimeZone const&)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5550
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::currentDateTime()
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5333
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformToMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:53
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1182
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qLocalTime(long, tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:384
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocalTime::utcToLocal(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:541
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::expressUtcAsLocal(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:2822
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::setMSecsSinceEpoch(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4550
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::fromMSecsSinceEpoch(long long, QTimeZone const&)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5650
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::currentDateTime(QTimeZone const&)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5550
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::currentDateTime()
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5333
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformToMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:53
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::closeArchive()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:934
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::close()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:247
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:51
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_mktime
+      at ./time/mktime.c:541
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qMkTime(tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:363
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    MkTimeResult::MkTimeResult
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:69
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    resolveLocalTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:369
+    QLocalTime::mapLocalTime(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:576
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::localStateAtMillis(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3005
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime::stateAtMillis
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3056
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3216
+    QDateTimePrivate::create(QDate, QTime, QTimeZone const&, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3577
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::QDateTime(QDate, QTime, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4041
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformFromMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:87
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:517
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_mktime
+      at ./time/mktime.c:541
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qMkTime(tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:363
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    MkTimeResult::MkTimeResult
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:69
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    resolveLocalTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:420
+    QLocalTime::mapLocalTime(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:576
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::localStateAtMillis(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3005
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime::stateAtMillis
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3056
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3216
+    QDateTimePrivate::create(QDate, QTime, QTimeZone const&, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3577
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::QDateTime(QDate, QTime, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4041
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformFromMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:87
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:517
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_mktime
+      at ./time/mktime.c:541
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qMkTime(tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:363
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    MkTimeResult::MkTimeResult
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:69
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    resolveLocalTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:369
+    QLocalTime::mapLocalTime(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:576
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::localStateAtMillis(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3005
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::toMSecsSinceEpoch() const
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4483
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::toSecsSinceEpoch() const
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4518
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformFromMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:88
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:517
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 78 from 4 other places
+
+320 calls to allocation functions with 0B peak consumption from
+deflateInit2_
+  in /lib/x86_64-linux-gnu/libz.so.1
+64 calls with 0B peak consumption from:
+    KGzipFilter::init(int, KGzipFilter::Flag)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:88
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KGzipFilter::init(int)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:62
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1255
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    KGzipFilter::init(int, KGzipFilter::Flag)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:88
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KGzipFilter::init(int)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:62
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1255
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    KGzipFilter::init(int, KGzipFilter::Flag)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:88
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KGzipFilter::init(int)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:62
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1255
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    KGzipFilter::init(int, KGzipFilter::Flag)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:88
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KGzipFilter::init(int)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:62
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1255
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 0B peak consumption from:
+    KGzipFilter::init(int, KGzipFilter::Flag)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:88
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KGzipFilter::init(int)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:62
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1255
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+212 calls to allocation functions with 22.35K peak consumption from
+_nl_make_l10nflist
+  at ../intl/l10nflist.c:242
+  in /lib/x86_64-linux-gnu/libc.so.6
+72 calls with 7.49K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+72 calls with 5.18K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+24 calls with 4.03K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+24 calls with 1.34K peak consumption from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+12 calls with 3.55K peak consumption from:
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 8 from 4 other places
+
+192 calls to allocation functions with 784B peak consumption from
+QIODevice::QIODevice()
+  at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:423
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+64 calls with 0B peak consumption from:
+    KCompressionDevice::KCompressionDevice(QIODevice*, bool, KCompressionDevice::CompressionType)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:208
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1251
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 392B peak consumption from:
+    KLimitedIODevice::KLimitedIODevice(QIODevice*, long long, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp:19
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    std::__detail::_MakeUniq<>::__single_object std::make_unique<>(QIODevice*&&, long long&&, long long&&)
+      at /usr/include/c++/13/bits/unique_ptr.h:1070
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::createDevice() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1472
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 392B peak consumption from:
+    KCompressionDevice::KCompressionDevice(QIODevice*, bool, KCompressionDevice::CompressionType)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:208
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::KCompressionDevice(std::unique_ptr<>, KCompressionDevice::CompressionType, std::optional<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:231
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::createDevice() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1498
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1472
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+130 calls to allocation functions with 7.80K peak consumption from
+KArchiveEntry::KArchiveEntry(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&)
+  at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:729
+  in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+64 calls with 0B peak consumption from:
+    KArchiveFile::KArchiveFile(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&, long long, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:809
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::KZipFileEntry(KZip*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&, QString const&, long long, long long, int, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1418
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1147
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 7.68K peak consumption from:
+    KArchiveFile::KArchiveFile(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&, long long, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:809
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::KZipFileEntry(KZip*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&, QString const&, long long, long long, int, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1418
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1 calls with 0B peak consumption from:
+    KArchiveDirectory::KArchiveDirectory(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:923
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:545
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1105
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1 calls with 120B peak consumption from:
+    KArchiveDirectory::KArchiveDirectory(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:923
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:545
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+128 calls to allocation functions with 120B peak consumption from
+KCompressionDevice::KCompressionDevice(QIODevice*, bool, KCompressionDevice::CompressionType)
+  at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:208
+  in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+64 calls with 0B peak consumption from:
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1251
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 120B peak consumption from:
+    KCompressionDevice::KCompressionDevice(std::unique_ptr<>, KCompressionDevice::CompressionType, std::optional<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:231
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::createDevice() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1498
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1472
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+128 calls to allocation functions with 24B peak consumption from
+KFilterBase::KFilterBase()
+  at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kfilterbase.cpp:26
+  in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+64 calls with 0B peak consumption from:
+    KGzipFilter::KGzipFilter()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:49
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::filterForCompressionType(KCompressionDevice::CompressionType)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:176
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::KCompressionDevice(QIODevice*, bool, KCompressionDevice::CompressionType)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:211
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1251
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 calls with 24B peak consumption from:
+    KGzipFilter::KGzipFilter()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:49
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::filterForCompressionType(KCompressionDevice::CompressionType)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:176
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::KCompressionDevice(QIODevice*, bool, KCompressionDevice::CompressionType)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:211
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::KCompressionDevice(std::unique_ptr<>, KCompressionDevice::CompressionType, std::optional<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:231
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::createDevice() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1498
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1472
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+
+PEAK MEMORY CONSUMERS
+4.24M peak memory consumed over 1082 calls from
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper::allocateData
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:139
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:181
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:157
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:211
+2.10M consumed over 64 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::reallocData(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1983
+    QByteArray::resize(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1907
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevice::readAll()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1261
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1481
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1.05M consumed over 1 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, char)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1863
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:41
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1.05M consumed over 1 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:42
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+16.40K consumed over 64 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QRingChunk::QRingChunk(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qringbuffer_p.h:34
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QRingBuffer::reserve(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qringbuffer.cpp:114
+    QIODevicePrivate::QRingBufferRef::reserve(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice_p.h:70
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1097
+    KCompressionDevice::readData(char*, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:411
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1076
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevice::readAll()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1262
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1481
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+16.40K consumed over 63 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QRingChunk::allocate(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qringbuffer.cpp:22
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QRingBuffer::reserve(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qringbuffer.cpp:116
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevicePrivate::QRingBufferRef::reserve(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice_p.h:70
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1097
+    KLimitedIODevice::readData(char*, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/klimitediodevice.cpp:63
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1097
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KCompressionDevice::readData(char*, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:411
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1076
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevice::readAll()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1262
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1481
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 16.63K from 89 other places
+
+73.73K peak memory consumed over 1 calls from
+0x72b59f6b738e
+  in /lib/x86_64-linux-gnu/libstdc++.so.6
+73.73K consumed over 1 calls from:
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+
+32.77K peak memory consumed over 64 calls from
+0x72b59f9c4e28
+  in /lib/x86_64-linux-gnu/libz.so.1
+32.77K consumed over 64 calls from:
+    inflate
+      in /lib/x86_64-linux-gnu/libz.so.1
+    KGzipFilter::uncompress()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:298
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::readData(char*, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:425
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1076
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevice::readAll()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1262
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1481
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+22.35K peak memory consumed over 212 calls from
+_nl_make_l10nflist
+  at ../intl/l10nflist.c:242
+  in /lib/x86_64-linux-gnu/libc.so.6
+7.49K consumed over 72 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+5.18K consumed over 72 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+4.03K consumed over 24 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+3.55K consumed over 12 calls from:
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1.34K consumed over 24 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 752B from 4 other places
+
+17.25K peak memory consumed over 23 calls from
+g_malloc
+  in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+16.38K consumed over 1 calls from:
+    0x72b59f4d6fd3
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+96B consumed over 1 calls from:
+    g_hash_table_new_full
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    0x72b59f4d6ff2
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+96B consumed over 1 calls from:
+    g_hash_table_new_full
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_main_context_new_with_flags
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_main_context_default
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    QEventDispatcherGlibPrivate::QEventDispatcherGlibPrivate(_GMainContext*)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qeventdispatcher_glib.cpp:278
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QEventDispatcherGlib::QEventDispatcherGlib(QObject*)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qeventdispatcher_glib.cpp:334
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QThreadPrivate::createEventDispatcher(QThreadData*)
+      at /home/qt/work/qt/qtbase/src/corelib/thread/qthread_unix.cpp:281
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QThreadData::createEventDispatcher()
+      at /home/qt/work/qt/qtbase/src/corelib/thread/qthread.cpp:99
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::createEventDispatcher()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:530
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:936
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+96B consumed over 1 calls from:
+    g_hash_table_new_full
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    0x72b59f4d6fc2
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+64B consumed over 1 calls from:
+    0x72b59f5003ba
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_hash_table_add
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    0x72b59f513b7c
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_source_attach
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    QEventDispatcherGlibPrivate::QEventDispatcherGlibPrivate(_GMainContext*)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qeventdispatcher_glib.cpp:297
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QEventDispatcherGlib::QEventDispatcherGlib(QObject*)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qeventdispatcher_glib.cpp:334
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QThreadPrivate::createEventDispatcher(QThreadData*)
+      at /home/qt/work/qt/qtbase/src/corelib/thread/qthread_unix.cpp:281
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QThreadData::createEventDispatcher()
+      at /home/qt/work/qt/qtbase/src/corelib/thread/qthread.cpp:99
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::createEventDispatcher()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:530
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:936
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 513B from 18 other places
+
+9.81K peak memory consumed over 780 calls from
+_nl_make_l10nflist
+  at ../intl/l10nflist.c:166
+  in /lib/x86_64-linux-gnu/libc.so.6
+3.37K consumed over 168 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+3.03K consumed over 216 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1.23K consumed over 192 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+898B consumed over 72 calls from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+893B consumed over 12 calls from:
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 392B from 13 other places
+
+7.80K peak memory consumed over 130 calls from
+KArchiveEntry::KArchiveEntry(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&)
+  at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:729
+  in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+7.68K consumed over 64 calls from:
+    KArchiveFile::KArchiveFile(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&, long long, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:809
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::KZipFileEntry(KZip*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&, QString const&, long long, long long, int, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1418
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+120B consumed over 1 calls from:
+    KArchiveDirectory::KArchiveDirectory(KArchive*, QString const&, int, QDateTime const&, QString const&, QString const&, QString const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:923
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:545
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+7.16K peak memory consumed over 64 calls from
+inflateInit2_
+  in /lib/x86_64-linux-gnu/libz.so.1
+7.16K consumed over 64 calls from:
+    KGzipFilter::init(int, KGzipFilter::Flag)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:82
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KGzipFilter::init(int)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:62
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:277
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::createDevice() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1504
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1472
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+4.89K peak memory consumed over 9 calls from
+__nss_module_allocate
+  at ./nss/nss_module.c:88
+  in /lib/x86_64-linux-gnu/libc.so.6
+4.34K consumed over 8 calls from:
+    __nss_action_parse::nss_action_parse
+      at ./nss/nss_action_parse.c:57
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __nss_action_parse
+      at ./nss/./nss/nss_action_parse.c:169
+    nss_database_check_reload_and_get::nss_database_reload::nss_database_reload_1::process_line
+      at ./nss/nss_database.c:232
+      in /lib/x86_64-linux-gnu/libc.so.6
+    nss_database_check_reload_and_get::nss_database_reload::nss_database_reload_1
+      at ./nss/./nss/nss_database.c:294
+    nss_database_check_reload_and_get::nss_database_reload
+      at ./nss/./nss/nss_database.c:332
+    nss_database_check_reload_and_get
+      at ./nss/./nss/nss_database.c:457
+    __GI___nss_passwd_lookup2
+      at ./nss/XXX-lookup.c:53
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __getpwuid_r
+      at ../nss/getXXbyYY_r.c:264
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getpwuid
+      at ../nss/getXXbyYY.c:140
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getCurrentUserName
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:511
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:542
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1105
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+544B consumed over 1 calls from:
+    __nss_action_parse::nss_action_parse
+      at ./nss/nss_action_parse.c:57
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __nss_action_parse
+      at ./nss/./nss/nss_action_parse.c:169
+    nss_database_check_reload_and_get::nss_database_reload::nss_database_select_default
+      at ./nss/nss_database.c:166
+      in /lib/x86_64-linux-gnu/libc.so.6
+    nss_database_check_reload_and_get::nss_database_reload
+      at ./nss/./nss/nss_database.c:368
+    nss_database_check_reload_and_get
+      at ./nss/./nss/nss_database.c:457
+    __GI___nss_passwd_lookup2
+      at ./nss/XXX-lookup.c:53
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __getpwuid_r
+      at ../nss/getXXbyYY_r.c:264
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getpwuid
+      at ../nss/getXXbyYY.c:140
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getCurrentUserName
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:511
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:542
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1105
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+4.42K peak memory consumed over 463 calls from
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper::allocateData
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:139
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:181
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:157
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:220
+2.80K consumed over 64 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:140
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:682
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:164
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:690
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1.16K consumed over 1 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::fromLatin1(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5898
+    QString::fromLatin1(char const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:663
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    qt_splitLocaleName(QStringView, QStringView*, QStringView*, QStringView*)::isScript
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:584
+    qt_splitLocaleName(QStringView, QStringView*, QStringView*, QStringView*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:611
+    QLocaleId::fromName(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:637
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocale::QLocale(QStringView)::localePrivateByName
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:906
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocale::QLocale(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:1097
+    QSystemLocaleData::readEnvironment()
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale_unix.cpp:70
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QSystemLocaleData::QSystemLocaleData()
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale_unix.cpp:25
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qSystemLocaleData::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale_unix.cpp:19
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QSystemLocale::query(QSystemLocale::QueryType, QVariant&&) const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale_unix.cpp:129
+    updateSystemPrivate
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:787
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    systemData
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:832
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocale::system()
+      at /home/qt/work/qt/qtbase/src/corelib/text/qlocale.cpp:2918
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    getSystemLocale
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:37
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:102
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+88B consumed over 1 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:140
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:682
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfile.h:164
+    QFileSystemEntry::resolveFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:116
+    QFileSystemEntry::filePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:100
+    QFileInfoPrivate::getFileName(QAbstractFileEngine::FileName) const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo.cpp:29
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFileInfo::canonicalFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo.cpp:603
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::applicationFilePath()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:2546
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::applicationDirPath()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:2457
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    findConfiguration
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:125
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLibrarySettings::load()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:80
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLibrarySettings::QLibrarySettings()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:60
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qt_library_settings::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:58
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QLibraryInfoPrivate::paths(QLibraryInfo::LibraryPath, QLibraryInfoPrivate::UsageMode)::havePaths
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:149
+    QLibraryInfoPrivate::paths(QLibraryInfo::LibraryPath, QLibraryInfoPrivate::UsageMode)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:627
+    QLibraryInfoPrivate::path(QLibraryInfo::LibraryPath, QLibraryInfoPrivate::UsageMode)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:689
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLibraryInfo::path(QLibraryInfo::LibraryPath)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:524
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLoggingRegistry::initializeRules()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:309
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLoggingRegistry::QLoggingRegistry()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:239
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qtLoggingRegistry::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:227
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QLoggingRegistry::instance()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:425
+    QLoggingCategory::QLoggingCategory(char const*, QtMsgType)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingcategory.cpp:183
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qtDefaultCategory::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingcategory.cpp:10
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QLoggingCategory::defaultCategory()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingcategory.cpp:312
+    qt_message_print
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:2084
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    qt_message_output(QtMsgType, QMessageLogContext const&, QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:2139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDebug::~QDebug()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qdebug.cpp:162
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:53
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+72B consumed over 1 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:140
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:682
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfile.h:164
+    QFileSystemEntry::resolveFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:116
+    QFileSystemEntry::filePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:100
+    QTemporaryDirPrivate::create(QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qtemporarydir.cpp:77
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QTemporaryDir::QTemporaryDir()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qtemporarydir.cpp:144
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:37
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+56B consumed over 1 calls from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2506
+    QString::sliced(long long, long long) const &
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:403
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QString::first(long long) const &
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:397
+    QString::left(long long) const &
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:373
+    QFileSystemEntry::path() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:161
+    QFileInfo::path() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo.cpp:662
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::applicationDirPath()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:2457
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    findConfiguration
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:125
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLibrarySettings::load()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:80
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLibrarySettings::QLibrarySettings()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:60
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qt_library_settings::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:58
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QLibraryInfoPrivate::paths(QLibraryInfo::LibraryPath, QLibraryInfoPrivate::UsageMode)::havePaths
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:149
+    QLibraryInfoPrivate::paths(QLibraryInfo::LibraryPath, QLibraryInfoPrivate::UsageMode)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:627
+    QLibraryInfoPrivate::path(QLibraryInfo::LibraryPath, QLibraryInfoPrivate::UsageMode)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:689
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLibraryInfo::path(QLibraryInfo::LibraryPath)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlibraryinfo.cpp:524
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLoggingRegistry::initializeRules()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:309
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLoggingRegistry::QLoggingRegistry()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:239
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qtLoggingRegistry::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:227
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QLoggingRegistry::instance()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingregistry.cpp:425
+    QLoggingCategory::QLoggingCategory(char const*, QtMsgType)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingcategory.cpp:183
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qtDefaultCategory::innerFunction
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingcategory.cpp:10
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QLoggingCategory::defaultCategory()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qloggingcategory.cpp:312
+    qt_message_print
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:2084
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    qt_message_output(QtMsgType, QMessageLogContext const&, QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:2139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDebug::~QDebug()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qdebug.cpp:162
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:53
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 248B from 116 other places
+
+
+MOST TEMPORARY ALLOCATIONS
+568 temporary allocations of 780 allocations in total (72.82%) from
+_nl_make_l10nflist
+  at ../intl/l10nflist.c:166
+  in /lib/x86_64-linux-gnu/libc.so.6
+168 temporary allocations of 192 allocations in total (87.50%) from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+144 temporary allocations of 216 allocations in total (66.67%) from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+96 temporary allocations of 168 allocations in total (57.14%) from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+48 temporary allocations of 72 allocations in total (66.67%) from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+21 temporary allocations of 24 allocations in total (87.50%) from:
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:295
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_make_l10nflist
+      at ../intl/l10nflist.c:285
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _nl_find_locale
+      at ./locale/findlocale.c:214
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_setlocale
+      at ./locale/setlocale.c:337
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 91B from 13 other places
+
+252 temporary allocations of 1082 allocations in total (23.29%) from
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper::allocateData
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:139
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:181
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:157
+QArrayData::allocate1(QArrayData**, long long, QArrayData::AllocationOption)
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:211
+64 temporary allocations of 64 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QUtf8::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:505
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:361
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    toLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1745
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:75
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:647
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::encodeName(QString const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:160
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::closeArchive()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:911
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::close()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:247
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:51
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 temporary allocations of 64 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QUtf8::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:505
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:361
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    toLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1745
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:75
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:647
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::encodeName(QString const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:160
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doFinishWriting(long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1284
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::finishWriting(long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:500
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:426
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 temporary allocations of 64 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QUtf8::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:505
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:361
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    toLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1745
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:75
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:647
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::encodeName(QString const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:160
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1163
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+27 temporary allocations of 27 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QUtf8::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:505
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:361
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    toLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1745
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:75
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:647
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFile::encodeName(QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfile.h:160
+    QFileSystemEntry::resolveNativeFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:130
+    QFileSystemEntry::nativeFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:106
+    qIsFilenameBroken(QFileSystemEntry const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystemengine_p.h:47
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFileSystemEngine::fillMetaData(QFileSystemEntry const&, QFileSystemMetaData&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystemengine_unix.cpp:840
+    QFileInfoPrivate::checkAttribute<>
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo_p.h:159
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFileInfoPrivate::checkAttribute<>
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo_p.h:169
+    QFileInfo::isFile() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo.cpp:1074
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)::existsAsSpecified
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:395
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:406
+    loadTranslation
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:80
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:139
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+9 temporary allocations of 9 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:136
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QByteArray::QByteArray(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qbytearray.cpp:1879
+    QUtf8::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:505
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertFromUnicode(QStringView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:361
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    toLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1745
+    QStringEncoder::encodeAsByteArray(QStringView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:75
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringEncoder::DecodedData<>::operator QByteArray() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:42
+    QString::toLocal8Bit_helper(QChar const*, long long)::qt_convert_to_local_8bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5759
+    QString::toLocal8Bit_helper(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5751
+    QString::toLocal8Bit() const &
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:647
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFile::encodeName(QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfile.h:160
+    QFileSystemEntry::resolveNativeFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:130
+    QFileSystemEntry::nativeFilePath() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystementry.cpp:106
+    qIsFilenameBroken(QFileSystemEntry const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystemengine_p.h:47
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFileSystemEngine::fillMetaData(QFileSystemEntry const&, QFileSystemMetaData&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfilesystemengine_unix.cpp:840
+    QFileInfoPrivate::checkAttribute<>
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo_p.h:159
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFileInfoPrivate::checkAttribute<>
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo_p.h:169
+    QFileInfo::isFile() const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo.cpp:1074
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)::existsAsSpecified
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:395
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:406
+    loadTranslation
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:80
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:100
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 24B from 89 other places
+
+129 temporary allocations of 398 allocations in total (32.41%) from
+__GI___strdup
+  at ./string/strdup.c:42
+  in /lib/x86_64-linux-gnu/libc.so.6
+64 temporary allocations of 64 allocations in total (100.00%) from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_mktime
+      at ./time/mktime.c:541
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qMkTime(tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:363
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    MkTimeResult::MkTimeResult
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:69
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    resolveLocalTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:369
+    QLocalTime::mapLocalTime(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:576
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::localStateAtMillis(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3005
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime::stateAtMillis
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3056
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3216
+    QDateTimePrivate::create(QDate, QTime, QTimeZone const&, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3577
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::QDateTime(QDate, QTime, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4041
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformFromMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:87
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:517
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+64 temporary allocations of 64 allocations in total (100.00%) from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_mktime
+      at ./time/mktime.c:541
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qMkTime(tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:363
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    MkTimeResult::MkTimeResult
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:69
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    resolveLocalTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:420
+    QLocalTime::mapLocalTime(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:576
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::localStateAtMillis(long long, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3005
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime::stateAtMillis
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3056
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    refreshZonedDateTime
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3216
+    QDateTimePrivate::create(QDate, QTime, QTimeZone const&, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:3577
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::QDateTime(QDate, QTime, QDateTime::TransitionResolution)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4041
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformFromMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:87
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:517
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    tzset_internal
+      at ./time/tzset.c:402
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __tzset
+      at ./time/tzset.c:551
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI_mktime
+      at ./time/mktime.c:541
+      in /lib/x86_64-linux-gnu/libc.so.6
+    qMkTime(tm*)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qtenvironmentvariables.cpp:363
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocalTime::computeSystemMillisRange()
+      at /home/qt/work/qt/qtbase/src/corelib/time/qlocaltime.cpp:710
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::expressUtcAsLocal(long long)::millisInSystemRange
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:2774
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTimePrivate::expressUtcAsLocal(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:2821
+    QDateTime::setMSecsSinceEpoch(long long)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:4550
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::fromMSecsSinceEpoch(long long, QTimeZone const&)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5650
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::currentDateTime(QTimeZone const&)
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5550
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDateTime::currentDateTime()
+      at /home/qt/work/qt/qtbase/src/corelib/time/qdatetime.cpp:5333
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    transformToMsDos
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:53
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1182
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 0B from 4 other places
+
+106 temporary allocations of 463 allocations in total (22.89%) from
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper::allocateData
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:139
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:181
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)::allocateHelper
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:157
+QArrayData::allocate2(QArrayData**, long long, QArrayData::AllocationOption)
+  at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.cpp:220
+64 temporary allocations of 64 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QUtf8::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:684
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:359
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    fromLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1738
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:141
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:682
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qfile.h:164
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:690
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+4 temporary allocations of 4 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::allocateGrow(QArrayDataPointer<> const&, long long, QArrayData::GrowthPosition)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:479
+    QArrayDataPointer<>::reallocateAndGrow(QArrayData::GrowthPosition, long long, QArrayDataPointer<>*)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:228
+    QArrayDataPointer<>::detachAndGrow(QArrayData::GrowthPosition, long long, char16_t const**, QArrayDataPointer<>*)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:209
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QString::append(QChar)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:3255
+    QMessagePattern::setPattern(QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:1227
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QMessagePattern::QMessagePattern()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:1191
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Q_QGS_qMessagePattern::innerFunction
+      at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/new:175
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    Holder
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:37
+    QGlobalStatic<>::instance
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:100
+    QGlobalStatic<>::operator()
+      at /home/qt/work/qt/qtbase/src/corelib/global/qglobalstatic.h:82
+    QInternalMessageLogContext::initFrom(QMessageLogContext const&)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:2381
+    QInternalMessageLogContext::initFrom(QMessageLogContext const&)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging.cpp:2371
+    QInternalMessageLogContext::QInternalMessageLogContext(QMessageLogContext const&)
+      at /home/qt/work/qt/qtbase/src/corelib/global/qlogging_p.h:61
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDebug::~QDebug()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qdebug.cpp:161
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:53
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+3 temporary allocations of 3 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QUtf8::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:684
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:359
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    fromLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1738
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:141
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:682
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfile.h:164
+    QStandardPaths::writableLocation(QStandardPaths::StandardLocation)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths_unix.cpp:226
+    QStandardPaths::standardLocations(QStandardPaths::StandardLocation)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths_unix.cpp:450
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:403
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    loadTranslation
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:80
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:139
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+3 temporary allocations of 3 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(QChar const*, long long)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2506
+    QString::sliced(long long, long long) const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:403
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QString::first(long long) const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:397
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QString::left(long long) const &
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qstring.h:373
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:112
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+3 temporary allocations of 3 allocations in total (100.00%) from:
+    QTypedArrayData<>::allocate(long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydata.h:139
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QArrayDataPointer<>::QArrayDataPointer(long long, long long, QArrayData::AllocationOption)
+      at /home/qt/work/qt/qtbase/src/corelib/tools/qarraydatapointer.h:58
+    QString::QString(long long, Qt::Initialization)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:2546
+    QUtf8::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:684
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QLocal8Bit::convertToUnicode(QByteArrayView, QStringConverterBase::State*)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter_p.h:359
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    fromLocal8Bit
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.cpp:1738
+    QStringDecoder::decodeAsString(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:141
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStringDecoder::EncodedData<>::operator QString() const
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstringconverter.h:104
+    QString::fromLocal8Bit(QByteArrayView)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.cpp:5975
+    QString QString::fromLocal8Bit<>(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/text/qstring.h:682
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QFile::decodeName(QByteArray const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qfile.h:164
+    xdgDataDirs
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths_unix.cpp:393
+    QStandardPaths::standardLocations(QStandardPaths::StandardLocation)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths_unix.cpp:428
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QStandardPaths::locate(QStandardPaths::StandardLocation, QString const&, QFlags<>)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qstandardpaths.cpp:403
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    loadTranslation
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:80
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    load
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:139
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    loadOnMainThread
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/build/vendor/karchive/src/ECMQmLoader-karchive6_qt.cpp:157
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QCoreApplicationPrivate::init()::qt_call_pre_routines
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:322
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:950
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 29B from 116 other places
+
+35 temporary allocations of 64 allocations in total (54.69%) from
+0x72b59f9c4e28
+  in /lib/x86_64-linux-gnu/libz.so.1
+35 temporary allocations of 64 allocations in total (54.69%) from:
+    inflate
+      in /lib/x86_64-linux-gnu/libz.so.1
+    KGzipFilter::uncompress()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kgzipfilter.cpp:298
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KCompressionDevice::readData(char*, long long)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kcompressiondevice.cpp:425
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    QIODevicePrivate::read(char*, long long, bool)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1076
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QIODevice::readAll()
+      at /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1262
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    KZipFileEntry::data() const
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1481
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:65
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+4 temporary allocations of 7 allocations in total (57.14%) from
+__GI__IO_file_doallocate
+  at ./libio/filedoalloc.c:101
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    __GI__IO_doallocbuf
+      at ./libio/genops.c:347
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _IO_new_file_seekoff
+      at ./libio/fileops.c:938
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __fseeko
+      at ./libio/fseeko.c:40
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI___nss_files_fopen
+      at ./nss/nss_files_fopen.c:36
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getpwuid_r::internal_setent
+      at nss_files/files-XXX.c:76
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getpwuid_r
+      at ./nss/nss_files/files-pwd.c:40
+    __getpwuid_r
+      at ../nss/getXXbyYY_r.c:273
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getpwuid
+      at ../nss/getXXbyYY.c:140
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getCurrentUserName
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:511
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:542
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1105
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    __GI__IO_doallocbuf
+      at ./libio/genops.c:347
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _IO_new_file_seekoff
+      at ./libio/fileops.c:938
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __fseeko
+      at ./libio/fseeko.c:40
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI___nss_files_fopen
+      at ./nss/nss_files_fopen.c:36
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getgrgid_r::internal_setent
+      at nss_files/files-XXX.c:76
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getgrgid_r
+      at ./nss/nss_files/files-grp.c:40
+    __getgrgid_r
+      at ../nss/getXXbyYY_r.c:273
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getgrgid
+      at ../nss/getXXbyYY.c:140
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getCurrentGroupName
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:529
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:543
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::doPrepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:1105
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::prepareWriting(QString const&, QString const&, QString const&, long long, unsigned int, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:491
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::writeFile(QString const&, QByteArrayView, unsigned int, QString const&, QString const&, QDateTime const&, QDateTime const&, QDateTime const&)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:414
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:50
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    __GI__IO_doallocbuf
+      at ./libio/genops.c:347
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _IO_new_file_seekoff
+      at ./libio/fileops.c:938
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __fseeko
+      at ./libio/fseeko.c:40
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI___nss_files_fopen
+      at ./nss/nss_files_fopen.c:36
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getpwuid_r::internal_setent
+      at nss_files/files-XXX.c:76
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getpwuid_r
+      at ./nss/nss_files/files-pwd.c:40
+    __getpwuid_r
+      at ../nss/getXXbyYY_r.c:273
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getpwuid
+      at ../nss/getXXbyYY.c:140
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getCurrentUserName
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:511
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:542
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    __GI__IO_doallocbuf
+      at ./libio/genops.c:347
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _IO_new_file_seekoff
+      at ./libio/fileops.c:938
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __fseeko
+      at ./libio/fseeko.c:40
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI___nss_files_fopen
+      at ./nss/nss_files_fopen.c:36
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getgrgid_r::internal_setent
+      at nss_files/files-XXX.c:76
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __GI__nss_files_getgrgid_r
+      at ./nss/nss_files/files-grp.c:40
+    __getgrgid_r
+      at ../nss/getXXbyYY_r.c:273
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getgrgid
+      at ../nss/getXXbyYY.c:140
+      in /lib/x86_64-linux-gnu/libc.so.6
+    getCurrentGroupName
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:529
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::rootDir()
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:543
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KZip::openArchive(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/kzip.cpp:784
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    KArchive::open(QFlags<>)
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/karchive.cpp:192
+      in /home/lemon/Desktop/Projects/2024_Research_Samsa/build/bin/libKF6Archive.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:59
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 0B from 2 other places
+
+1 temporary allocations of 45 allocations in total (2.22%) from
+QFileInfo::QFileInfo(QString const&)
+  at /home/qt/work/qt/qtbase/src/corelib/io/qfileinfo.cpp:370
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    QDir::isRelativePath(QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qdir.cpp:2440
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QDir::isAbsolutePath(QString const&)
+      at /home/qt/work/qt/qtbase/src/corelib/io/qdir.h:185
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QTemporaryDir::filePath(QString const&) const
+      at /home/qt/work/qt/qtbase/src/corelib/io/qtemporarydir.cpp:266
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:38
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 0B from 4 other places
+
+1 temporary allocations of 23 allocations in total (4.35%) from
+g_malloc
+  in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    g_slist_prepend
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_once_init_enter
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_main_context_new_with_flags
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    g_main_context_default
+      in /lib/x86_64-linux-gnu/libglib-2.0.so.0
+    QEventDispatcherGlibPrivate::QEventDispatcherGlibPrivate(_GMainContext*)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qeventdispatcher_glib.cpp:278
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QEventDispatcherGlib::QEventDispatcherGlib(QObject*)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qeventdispatcher_glib.cpp:334
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QThreadPrivate::createEventDispatcher(QThreadData*)
+      at /home/qt/work/qt/qtbase/src/corelib/thread/qthread_unix.cpp:281
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QThreadData::createEventDispatcher()
+      at /home/qt/work/qt/qtbase/src/corelib/thread/qthread.cpp:99
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::createEventDispatcher()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:530
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:936
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+  and 0B from 18 other places
+
+1 temporary allocations of 1 allocations in total (100.00%) from
+__argz_create_sep
+  at ./string/argz-ctsep.c:34
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    __GI_setlocale
+      at ./locale/setlocale.c:255
+      in /lib/x86_64-linux-gnu/libc.so.6
+    QCoreApplicationPrivate::initLocale()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:648
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplicationPrivate::init()
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:867
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    QCoreApplication::QCoreApplication(int&, char**, int)
+      at /home/qt/work/qt/qtbase/src/corelib/kernel/qcoreapplication.cpp:842
+      in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:32
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+1 temporary allocations of 1 allocations in total (100.00%) from
+__gnu_cxx::new_allocator<>::allocate(unsigned long, void const*)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/ext/new_allocator.h:115
+  in /home/lemon/Qt/6.8.3/gcc_64/lib/libQt6Core.so.6
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/bits/alloc_traits.h:460
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/bits/stl_vector.h:346
+void std::vector<>::_M_realloc_insert<>(__gnu_cxx::__normal_iterator<>, unsigned int&&)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/bits/vector.tcc:440
+unsigned int& std::vector<>::emplace_back<>(unsigned int&&)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/bits/vector.tcc:121
+std::vector<>::push_back(unsigned int&&)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/bits/stl_vector.h:1204
+std::seed_seq::seed_seq<>(unsigned int const*, unsigned int const*)
+  at /opt/rh/gcc-toolset-10/root/usr/include/c++/10/bits/random.tcc:3212
+QRandomGenerator::QRandomGenerator(unsigned int const*, unsigned int const*)
+  at /home/qt/work/qt/qtbase/src/corelib/global/qrandom.cpp:1207
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    QRandomGenerator::QRandomGenerator(unsigned int const*, long long)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qrandom.h:33
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+    QRandomGenerator::QRandomGenerator(unsigned int)
+      at /home/lemon/Qt/6.8.3/gcc_64/include/QtCore/qrandom.h:27
+    main
+      at /home/lemon/Desktop/Projects/2024_Research_Samsa/heaptrack/extract_driver.cpp:43
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:58
+      in /lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /tmp/tmp.YCqaY4wiTr/extract_driver
+
+
+total runtime: 1.24s.
+calls to allocation functions: 5295 (4270/s)
+temporary memory allocations: 1100 (887/s)
+peak heap memory consumption: 4.45M
+peak RSS (including heaptrack overhead): 18.15M
+total memory leaked: 59.72K
+suppressed leaks: 6.58K
