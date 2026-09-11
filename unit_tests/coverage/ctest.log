@@ -1,0 +1,19 @@
+Test project /home/lemon/Desktop/Projects/2024_Research_Samsa/build-coverage
+    Start 1: appstreamtest
+1/7 Test #1: appstreamtest ....................   Passed    0.01 sec
+    Start 2: karchivetest
+2/7 Test #2: karchivetest .....................   Passed   17.55 sec
+    Start 3: kfiltertest
+3/7 Test #3: kfiltertest ......................   Passed    0.13 sec
+    Start 4: klimitediodevicetest
+4/7 Test #4: klimitediodevicetest .............   Passed    0.01 sec
+    Start 5: kcompressiondevicetest
+5/7 Test #5: kcompressiondevicetest ...........   Passed    0.10 sec
+    Start 6: vs_robustnesstest
+6/7 Test #6: vs_robustnesstest ................   Passed    0.12 sec
+    Start 7: vs_roundtriptest
+7/7 Test #7: vs_roundtriptest .................   Passed    0.51 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =  18.43 sec
