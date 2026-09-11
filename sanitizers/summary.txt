@@ -1,0 +1,6 @@
+AddressSanitizer + UndefinedBehaviorSanitizer run
+target: KArchive 633dc09, all suites
+
+RESULT: clean -- no ASan or UBSan findings across any suite
+
+100% tests passed, 0 tests failed out of 7

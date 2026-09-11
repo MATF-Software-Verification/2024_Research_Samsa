@@ -55,3 +55,8 @@ prefix.sh
 *.swo
 *~
 .DS_Store
+
+# ---- Artifacts written to CWD by upstream autotests (karchivetest etc.) ----
+/test3
+/karchivetest.*
+/karchive-long-non-ascii-names.tar

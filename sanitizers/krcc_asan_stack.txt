@@ -1,0 +1,14 @@
+==151175==ERROR: AddressSanitizer: unknown-crash on address 0x7ac079227000 at pc 0x7ac07acfb42e bp 0x7ffd00c5eff0 sp 0x7ffd00c5e798
+    #2 0x7ac07995050c in QResourceFileEngine::read(char*, long long) /home/qt/work/qt/qtbase/src/corelib/io/qresource.cpp:1479
+    #3 0x7ac07992b48a in QFileDevice::readData(char*, long long) /home/qt/work/qt/qtbase/src/corelib/io/qfiledevice.cpp:471
+    #5 0x7ac07993df8b in QIODevice::readAll() /home/qt/work/qt/qtbase/src/corelib/io/qiodevice.cpp:1262
+    #6 0x7ac07a68104e in KRccFileEntry::data() const /home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/src/krcc.cpp:53
+    #7 0x5df07fd08f88 in walk /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:36
+    #8 0x5df07fd092a2 in walk /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:37
+    #9 0x5df07fd092a2 in walk /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:37
+    #10 0x5df07fd092a2 in walk /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:37
+    #11 0x5df07fd092a2 in walk /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:37
+    #12 0x5df07fd092a2 in walk /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:37
+    #13 0x5df07fd0a252 in main /home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/reproducers/krcc_crash.cpp:54
+    #16 0x5df07fd08724 in _start (/tmp/claude-1000/-home-lemon-Desktop-Projects-karchive/2ae07f60-7d99-4959-b24d-4756d51c0d10/scratchpad/krcc_asan+0x15724) (BuildId: 8fcaa8b810d04006c89f23d3061503a94cf99d5e)
+SUMMARY: AddressSanitizer: unknown-crash ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors_memintrinsics.inc:115 in memcpy
