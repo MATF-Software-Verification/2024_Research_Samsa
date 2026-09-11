@@ -1,0 +1,287 @@
+==153600== Memcheck, a memory error detector
+==153600== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==153600== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==153600== Command: /home/lemon/Desktop/Projects/2024_Research_Samsa/build-memcheck/bin/vs_robustnesstest
+==153600== 
+********* Start testing of VsRobustnessTest *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 10.3.1 20210422 (Red Hat 10.3.1-1)), ubuntu 24.04
+PASS   : VsRobustnessTest::initTestCase()
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 0%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 1%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 5%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 10%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 25%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 50%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 75%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 90%)
+PASS   : VsRobustnessTest::truncation(7z_coder_test_lzma2.7z @ 99%)
+PASS   : VsRobustnessTest::truncation(artest.a @ 0%)
+PASS   : VsRobustnessTest::truncation(artest.a @ 1%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 5%) kf.archive: KArchiveFile::data: Different size 1566 than expected 3288 in "elf-init.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 5%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 10%) kf.archive: KArchiveFile::data: Different size 640 than expected 3436 in "atexit.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 10%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 25%) kf.archive: KArchiveFile::data: Different size 894 than expected 3316 in "stat.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 25%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 50%) kf.archive: KArchiveFile::data: Different size 2892 than expected 3312 in "stat64.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 50%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 75%) kf.archive: KArchiveFile::data: Different size 1462 than expected 3380 in "fstatat64.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 75%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 90%) kf.archive: KArchiveFile::data: Different size 2388 than expected 2848 in "mknodat.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 90%)
+QWARN  : VsRobustnessTest::truncation(artest.a @ 99%) kf.archive: KArchiveFile::data: Different size 1803 than expected 2288 in "stack_chk_fail_local.oS"
+PASS   : VsRobustnessTest::truncation(artest.a @ 99%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 0%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 1%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 5%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 10%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 25%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 50%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 75%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 90%)
+PASS   : VsRobustnessTest::truncation(runtime_resource.rcc @ 99%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 0%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 1%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 5%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 10%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 25%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 50%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 75%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 90%)
+PASS   : VsRobustnessTest::truncation(global_header_test.tar.gz @ 99%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 0%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 1%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 5%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 10%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 25%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 50%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 75%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 90%)
+PASS   : VsRobustnessTest::truncation(dirpermissions.zip @ 99%)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 0 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 0 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 1 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 1 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 2 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 2 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 3 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 3 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 7 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 7 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 15 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 15 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 31 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 31 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 63 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 63 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 127 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 127 = 0xFF)
+SKIP   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 255 = 0x00) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 255 = 0xFF) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 511 = 0x00) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(7z_coder_test_lzma2.7z @ 511 = 0xFF) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 0 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 0 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 1 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 1 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 2 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 2 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 3 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 3 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 7 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 7 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 15 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 15 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 31 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 31 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 63 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 63 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 127 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 127 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 255 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 255 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 511 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(artest.a @ 511 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 0 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 0 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 1 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 1 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 2 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 2 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 3 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 3 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 7 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 7 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 15 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 15 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 31 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 31 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 63 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 63 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 127 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 127 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 255 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 255 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 511 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(runtime_resource.rcc @ 511 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 0 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 0 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 1 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 1 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 2 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 2 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 3 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 3 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 7 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 7 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 15 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 15 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 31 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 31 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 63 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 63 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 127 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 127 = 0xFF)
+SKIP   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 255 = 0x00) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 255 = 0xFF) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 511 = 0x00) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(global_header_test.tar.gz @ 511 = 0xFF) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 0 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 0 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 1 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 1 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 2 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 2 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 3 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 3 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 7 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 7 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 15 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 15 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 31 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 31 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 63 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 63 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 127 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 127 = 0xFF)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 255 = 0x00)
+PASS   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 255 = 0xFF)
+SKIP   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 511 = 0x00) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+SKIP   : VsRobustnessTest::byteCorruption(dirpermissions.zip @ 511 = 0xFF) offset beyond this sample's size
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/unit_tests/tests/vs_robustnesstest.cpp(312)]
+PASS   : VsRobustnessTest::degenerateInput(empty.7z)
+PASS   : VsRobustnessTest::degenerateInput(one-zero-byte.7z)
+PASS   : VsRobustnessTest::degenerateInput(all-zeros-1k.7z)
+PASS   : VsRobustnessTest::degenerateInput(all-0xFF-1k.7z)
+PASS   : VsRobustnessTest::degenerateInput(ascii-text.7z)
+PASS   : VsRobustnessTest::degenerateInput(7z-signature-only.7z)
+PASS   : VsRobustnessTest::degenerateInput(zip-signature-only.7z)
+PASS   : VsRobustnessTest::degenerateInput(ar-signature-only.7z)
+PASS   : VsRobustnessTest::degenerateInput(empty.zip)
+PASS   : VsRobustnessTest::degenerateInput(one-zero-byte.zip)
+PASS   : VsRobustnessTest::degenerateInput(all-zeros-1k.zip)
+PASS   : VsRobustnessTest::degenerateInput(all-0xFF-1k.zip)
+PASS   : VsRobustnessTest::degenerateInput(ascii-text.zip)
+PASS   : VsRobustnessTest::degenerateInput(7z-signature-only.zip)
+PASS   : VsRobustnessTest::degenerateInput(zip-signature-only.zip)
+PASS   : VsRobustnessTest::degenerateInput(ar-signature-only.zip)
+PASS   : VsRobustnessTest::degenerateInput(empty.a)
+PASS   : VsRobustnessTest::degenerateInput(one-zero-byte.a)
+PASS   : VsRobustnessTest::degenerateInput(all-zeros-1k.a)
+PASS   : VsRobustnessTest::degenerateInput(all-0xFF-1k.a)
+PASS   : VsRobustnessTest::degenerateInput(ascii-text.a)
+PASS   : VsRobustnessTest::degenerateInput(7z-signature-only.a)
+PASS   : VsRobustnessTest::degenerateInput(zip-signature-only.a)
+QWARN  : VsRobustnessTest::degenerateInput(ar-signature-only.a) kf.archive: Couldn't read header
+PASS   : VsRobustnessTest::degenerateInput(ar-signature-only.a)
+PASS   : VsRobustnessTest::degenerateInput(empty.rcc)
+PASS   : VsRobustnessTest::degenerateInput(one-zero-byte.rcc)
+PASS   : VsRobustnessTest::degenerateInput(all-zeros-1k.rcc)
+PASS   : VsRobustnessTest::degenerateInput(all-0xFF-1k.rcc)
+PASS   : VsRobustnessTest::degenerateInput(ascii-text.rcc)
+PASS   : VsRobustnessTest::degenerateInput(7z-signature-only.rcc)
+PASS   : VsRobustnessTest::degenerateInput(zip-signature-only.rcc)
+PASS   : VsRobustnessTest::degenerateInput(ar-signature-only.rcc)
+PASS   : VsRobustnessTest::degenerateInput(empty.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(one-zero-byte.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(all-zeros-1k.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(all-0xFF-1k.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(ascii-text.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(7z-signature-only.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(zip-signature-only.tar.gz)
+PASS   : VsRobustnessTest::degenerateInput(ar-signature-only.tar.gz)
+QINFO  : VsRobustnessTest::cleanupTestCase() malformed inputs accepted by open(): 91, rejected: 94
+PASS   : VsRobustnessTest::cleanupTestCase()
+Totals: 187 passed, 0 failed, 10 skipped, 0 blacklisted, 7867ms
+********* Finished testing of VsRobustnessTest *********
+==153600== 
+==153600== HEAP SUMMARY:
+==153600==     in use at exit: 17,312 bytes in 19 blocks
+==153600==   total heap usage: 320,598 allocs, 320,579 frees, 349,320,836 bytes allocated
+==153600== 
+==153600== 0 bytes in 1 blocks are definitely lost in loss record 1 of 19
+==153600==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==153600==    by 0x4A848E9: registerSelf (qresource.cpp:1216)
+==153600==    by 0x4A848E9: QResource::registerResource(QString const&, QString const&) (qresource.cpp:1268)
+==153600==    by 0x48A8E9A: KRcc::openArchive(QFlags<QIODeviceBase::OpenModeFlag>) (krcc.cpp:123)
+==153600==    by 0x4888281: KArchive::open(QFlags<QIODeviceBase::OpenModeFlag>) (karchive.cpp:192)
+==153600==    by 0x10C0E6: (anonymous namespace)::exerciseArchive(QString const&, bool) (vs_robustnesstest.cpp:122)
+==153600==    by 0x10F0D9: VsRobustnessTest::truncation() (vs_robustnesstest.cpp:270)
+==153600==    by 0x10FCC2: VsRobustnessTest::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (vs_robustnesstest.moc:126)
+==153600==    by 0x4AC3FCB: QMetaMethodInvoker::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*) (qmetaobject.cpp:2756)
+==153600==    by 0x4AC504F: QMetaMethod::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*) (qmetaobject.cpp:2595)
+==153600==    by 0x48E5D21: invoke<void> (qmetaobject.h:149)
+==153600==    by 0x48E5D21: invoke<> (qmetaobject.h:161)
+==153600==    by 0x48E5D21: QTest::invokeTestMethodIfValid(QMetaMethod, QObject*) (qtestcase.cpp:441)
+==153600==    by 0x48EDBF3: QTest::TestMethods::invokeTestOnData(int) const (qtestcase.cpp:1074)
+==153600==    by 0x48EEA0B: operator() (qtestcase.cpp:1392)
+==153600==    by 0x48EEA0B: runWithWatchdog<QTest::TestMethods::invokeTest(int, QLatin1StringView, std::optional<QTest::WatchDog>&) const::<lambda()> > (qtestcase.cpp:1275)
+==153600==    by 0x48EEA0B: QTest::TestMethods::invokeTest(int, QLatin1String, std::optional<QTest::WatchDog>&) const (qtestcase.cpp:1391)
+==153600==    by 0x48EF117: QTest::TestMethods::invokeTests(QObject*) const (qtestcase.cpp:1734)
+==153600==    by 0x48EFDF1: QTest::qRun() (qtestcase.cpp:1975)
+==153600==    by 0x48F004F: QTest::qExec(QObject*, int, char**) (qtestcase.cpp:1847)
+==153600==    by 0x10FDB3: main (vs_robustnesstest.cpp:394)
+==153600== 
+==153600== 0 bytes in 1 blocks are definitely lost in loss record 2 of 19
+==153600==    at 0x48485C3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==153600==    by 0x4A848E9: registerSelf (qresource.cpp:1216)
+==153600==    by 0x4A848E9: QResource::registerResource(QString const&, QString const&) (qresource.cpp:1268)
+==153600==    by 0x48A8E9A: KRcc::openArchive(QFlags<QIODeviceBase::OpenModeFlag>) (krcc.cpp:123)
+==153600==    by 0x4888281: KArchive::open(QFlags<QIODeviceBase::OpenModeFlag>) (karchive.cpp:192)
+==153600==    by 0x10C0E6: (anonymous namespace)::exerciseArchive(QString const&, bool) (vs_robustnesstest.cpp:122)
+==153600==    by 0x10E866: VsRobustnessTest::degenerateInput() (vs_robustnesstest.cpp:379)
+==153600==    by 0x10FCDE: VsRobustnessTest::qt_static_metacall(QObject*, QMetaObject::Call, int, void**) (vs_robustnesstest.moc:130)
+==153600==    by 0x4AC3FCB: QMetaMethodInvoker::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*) (qmetaobject.cpp:2756)
+==153600==    by 0x4AC504F: QMetaMethod::invokeImpl(QMetaMethod, void*, Qt::ConnectionType, long long, void const* const*, char const* const*, QtPrivate::QMetaTypeInterface const* const*) (qmetaobject.cpp:2595)
+==153600==    by 0x48E5D21: invoke<void> (qmetaobject.h:149)
+==153600==    by 0x48E5D21: invoke<> (qmetaobject.h:161)
+==153600==    by 0x48E5D21: QTest::invokeTestMethodIfValid(QMetaMethod, QObject*) (qtestcase.cpp:441)
+==153600==    by 0x48EDBF3: QTest::TestMethods::invokeTestOnData(int) const (qtestcase.cpp:1074)
+==153600==    by 0x48EEA0B: operator() (qtestcase.cpp:1392)
+==153600==    by 0x48EEA0B: runWithWatchdog<QTest::TestMethods::invokeTest(int, QLatin1StringView, std::optional<QTest::WatchDog>&) const::<lambda()> > (qtestcase.cpp:1275)
+==153600==    by 0x48EEA0B: QTest::TestMethods::invokeTest(int, QLatin1String, std::optional<QTest::WatchDog>&) const (qtestcase.cpp:1391)
+==153600==    by 0x48EF117: QTest::TestMethods::invokeTests(QObject*) const (qtestcase.cpp:1734)
+==153600==    by 0x48EFDF1: QTest::qRun() (qtestcase.cpp:1975)
+==153600==    by 0x48F004F: QTest::qExec(QObject*, int, char**) (qtestcase.cpp:1847)
+==153600==    by 0x10FDB3: main (vs_robustnesstest.cpp:394)
+==153600== 
+==153600== LEAK SUMMARY:
+==153600==    definitely lost: 0 bytes in 2 blocks
+==153600==    indirectly lost: 0 bytes in 0 blocks
+==153600==      possibly lost: 0 bytes in 0 blocks
+==153600==    still reachable: 17,312 bytes in 17 blocks
+==153600==         suppressed: 0 bytes in 0 blocks
+==153600== Reachable blocks (those to which a pointer was found) are not shown.
+==153600== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==153600== 
+==153600== For lists of detected and suppressed errors, rerun with: -s
+==153600== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

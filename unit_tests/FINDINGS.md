@@ -6,8 +6,10 @@ clang-tidy or cppcheck (see `../clang_tidy/TRIAGE.md`, `../cppcheck/TRIAGE.md`).
 
 | # | Component | Severity | Status |
 |---|---|---|---|
-| 1 | `KRcc` | **crash on untrusted input** (SIGBUS/SIGSEGV) | reproduced, minimised |
+| 1 | `KRcc` | **crash on untrusted input** (SIGBUS/SIGSEGV) | reproduced, minimised; ASan-confirmed |
 | 2 | `K7Zip` | data corruption — filenames | reproduced, root-caused |
+| 3 | `KZstdFilter` | uninitialised-memory use | reproduced (memcheck), root-caused |
+| 4 | `K7Zip` | memory scales pathologically on write (2.84 GB for 64 MiB) | measured (heaptrack), root-caused |
 
 ---
 
@@ -163,6 +165,98 @@ same file already uses `QStringEncoder(QStringEncoder::Utf16LE)` for exactly thi
 job — the correct idiom is present in the file, 1100 lines away.
 
 ---
+
+## 3. KZstdFilter uses an uninitialised struct member on empty input
+
+Found by memcheck, not by the QTest assertions — the program behaves correctly,
+so only a memory checker sees it. Full triage: `../valgrind/memcheck/TRIAGE.md` §1.
+
+### Symptom
+
+Closing a `.tar.zst` (or any zstd-compressed archive) to which **no data was
+written** makes `ZSTD_compressStream2` act on an uninitialised pointer. memcheck,
+with `--track-origins=yes`:
+
+```
+Conditional jump or move depends on uninitialised value(s)
+   at ZSTD_compressStream2                    (libzstd)
+   by KZstdFilter::compress(bool)             kzstdfilter.cpp:126
+   by KCompressionDevice::writeData(...)      kcompressiondevice.cpp:479
+   by KCompressionDevice::close()             kcompressiondevice.cpp:291
+   by KArchive::close()                       karchive.cpp:254
+Uninitialised value was created by a heap allocation
+   by KZstdFilter::KZstdFilter()              kzstdfilter.cpp:32
+```
+
+### Root cause
+
+`KZstdFilter::Private` holds `ZSTD_inBuffer inBuffer` and `ZSTD_outBuffer
+outBuffer` as members (kzstdfilter.cpp:27-28). `new Private` does not
+value-initialise them, and `init()` sets only `inBuffer.size` and `inBuffer.pos`
+(lines 46-47). When an archive is closed with nothing written, `setInBuffer()`
+is never called, so `inBuffer.src` is still garbage when zstd reads it.
+
+### Assessment
+
+Low severity: zstd does not dereference `src` when `size == 0`, so there is no
+crash and the output is correct. But it is a real uninitialised-memory use in
+KArchive's own code, on the ordinary empty-archive edge case, and the fix is one
+line — value-initialise the struct (`ZSTD_inBuffer inBuffer{};`) or set
+`inBuffer.src = nullptr` in `init()`. ASan did not catch it (the memory is
+initialised as far as ASan's shadow is concerned — it is *uninitialised value*
+use, which only memcheck tracks).
+
+### Reproducing
+
+`./unit_tests/reproducers/build_and_run.sh` builds it; or directly:
+
+```bash
+valgrind --track-origins=yes ./kzstd_uninitialised
+```
+
+Source: `unit_tests/reproducers/kzstd_uninitialised.cpp`.
+
+## 4. K7Zip write path uses pathological amounts of memory
+
+Found by heaptrack, not by any correctness check — the writer works, it just
+uses ~240x the memory the other formats do. Full triage:
+`../heaptrack/TRIAGE.md` §1.
+
+### Symptom
+
+Writing a 64 MiB archive peaks at **2.84 GB** of heap for 7z, versus ~12 MiB for
+tar and ~4.5 MiB for zip:
+
+```
+format     peak-heap
+tar          11.75M
+zip           4.45M
+7z         >> 2.84G <<
+```
+
+### Root cause
+
+K7Zip has no streaming write path. `doWriteData` accumulates every entry into
+one member buffer `d->outData` (k7zip.cpp:480, 3183), and `closeArchive` then
+makes several full copies of it: `createItemsFromEntities` copies each entry via
+`outData.mid()` (k7zip.cpp:1988), the result is assigned back with
+`d->outData = data` (3082), and compression allocates another buffer. Memory
+therefore scales with total uncompressed size, several times over, inflated
+further by QByteArray's reallocating growth.
+
+### Assessment
+
+Not a crash or a correctness bug, and no malformed input is involved — a
+scalability defect on the ordinary write path. A 1 GiB 7z would attempt tens of
+GiB and OOM. Only a profiler surfaces this, because functionally everything
+works. A fix would stream entries to the device instead of buffering the whole
+archive, which is a larger change than the one-liners in findings 2 and 3.
+
+### Reproducing
+
+```bash
+./heaptrack/run_heaptrack.sh
+```
 
 ## Status
 

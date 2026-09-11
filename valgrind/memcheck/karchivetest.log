@@ -1,0 +1,282 @@
+==153670== Memcheck, a memory error detector
+==153670== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==153670== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==153670== Command: /home/lemon/Desktop/Projects/2024_Research_Samsa/build-memcheck/bin/karchivetest
+==153670== 
+********* Start testing of KArchiveTest *********
+Config: Using QtTest library 6.8.3, Qt 6.8.3 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 10.3.1 20210422 (Red Hat 10.3.1-1)), ubuntu 24.04
+PASS   : KArchiveTest::initTestCase()
+PASS   : KArchiveTest::testEmptyFilename()
+PASS   : KArchiveTest::testNullDevice()
+PASS   : KArchiveTest::testNonExistentFile()
+PASS   : KArchiveTest::testCreateTar(.tar)
+RESULT : KArchiveTest::testCreateTar():".tar":
+     18 msecs per iteration (total: 73, iterations: 4)
+PASS   : KArchiveTest::testCreateTarXXX(.tar.gz)
+RESULT : KArchiveTest::testCreateTarXXX():".tar.gz":
+     21 msecs per iteration (total: 84, iterations: 4)
+PASS   : KArchiveTest::testCreateTarXXX(.tar.bz2)
+RESULT : KArchiveTest::testCreateTarXXX():".tar.bz2":
+     24 msecs per iteration (total: 96, iterations: 4)
+PASS   : KArchiveTest::testCreateTarXXX(.tar.lzma)
+RESULT : KArchiveTest::testCreateTarXXX():".tar.lzma":
+     272 msecs per iteration (total: 272, iterations: 1)
+PASS   : KArchiveTest::testCreateTarXXX(.tar.lz)
+RESULT : KArchiveTest::testCreateTarXXX():".tar.lz":
+     274 msecs per iteration (total: 274, iterations: 1)
+PASS   : KArchiveTest::testCreateTarXXX(.tar.xz)
+RESULT : KArchiveTest::testCreateTarXXX():".tar.xz":
+     289 msecs per iteration (total: 289, iterations: 1)
+PASS   : KArchiveTest::testCreateTarXXX(.tar.zst)
+RESULT : KArchiveTest::testCreateTarXXX():".tar.zst":
+     22 msecs per iteration (total: 90, iterations: 4)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0xA00ECE1: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0xA6D2861: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+PASS   : KArchiveTest::testReadTar(.tar.gz)
+RESULT : KArchiveTest::testReadTar():".tar.gz":
+     198 msecs per iteration (total: 198, iterations: 1)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x9D27A21: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x9DE8B51: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+PASS   : KArchiveTest::testReadTar(.tar.bz2)
+RESULT : KArchiveTest::testReadTar():".tar.bz2":
+     200 msecs per iteration (total: 200, iterations: 1)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0xA038B21: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0xA1DA721: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+PASS   : KArchiveTest::testReadTar(.tar.lzma)
+RESULT : KArchiveTest::testReadTar():".tar.lzma":
+     208 msecs per iteration (total: 208, iterations: 1)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x83B5161: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x848C0B1: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+PASS   : KArchiveTest::testReadTar(.tar.lz)
+RESULT : KArchiveTest::testReadTar():".tar.lz":
+     202 msecs per iteration (total: 202, iterations: 1)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x91D1561: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x935E691: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+PASS   : KArchiveTest::testReadTar(.tar.xz)
+RESULT : KArchiveTest::testReadTar():".tar.xz":
+     202 msecs per iteration (total: 202, iterations: 1)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0xA58A2A1: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0xA279311: ???
+==153670==  Uninitialised value was created by a stack allocation
+==153670==    at 0x4BD6200: QGregorianCalendar::julianFromParts(int, int, int) (qgregoriancalendar.cpp:235)
+==153670== 
+PASS   : KArchiveTest::testReadTar(.tar.zst)
+RESULT : KArchiveTest::testReadTar():".tar.zst":
+     197 msecs per iteration (total: 197, iterations: 1)
+PASS   : KArchiveTest::testUncompress(.tar.gz)
+PASS   : KArchiveTest::testUncompress(.tar.bz2)
+PASS   : KArchiveTest::testUncompress(.tar.lzma)
+PASS   : KArchiveTest::testUncompress(.tar.lz)
+PASS   : KArchiveTest::testUncompress(.tar.xz)
+PASS   : KArchiveTest::testUncompress(.tar.zst)
+PASS   : KArchiveTest::testTarFileData(.tar.gz)
+PASS   : KArchiveTest::testTarFileData(.tar.bz2)
+PASS   : KArchiveTest::testTarFileData(.tar.lzma)
+PASS   : KArchiveTest::testTarFileData(.tar.lz)
+PASS   : KArchiveTest::testTarFileData(.tar.xz)
+PASS   : KArchiveTest::testTarFileData(.tar.zst)
+PASS   : KArchiveTest::testTarCopyTo(.tar.gz)
+PASS   : KArchiveTest::testTarCopyTo(.tar.bz2)
+PASS   : KArchiveTest::testTarCopyTo(.tar.lzma)
+PASS   : KArchiveTest::testTarCopyTo(.tar.lz)
+PASS   : KArchiveTest::testTarCopyTo(.tar.xz)
+PASS   : KArchiveTest::testTarCopyTo(.tar.zst)
+PASS   : KArchiveTest::testTarReadWrite(.tar.gz)
+PASS   : KArchiveTest::testTarReadWrite(.tar.bz2)
+PASS   : KArchiveTest::testTarReadWrite(.tar.lzma)
+PASS   : KArchiveTest::testTarReadWrite(.tar.lz)
+PASS   : KArchiveTest::testTarReadWrite(.tar.xz)
+PASS   : KArchiveTest::testTarReadWrite(.tar.zst)
+PASS   : KArchiveTest::testTarMaxLength(maxlength.tar.gz)
+PASS   : KArchiveTest::testTarGlobalHeader()
+PASS   : KArchiveTest::testTarPrefix()
+PASS   : KArchiveTest::testTarDirectoryForgotten()
+PASS   : KArchiveTest::testTarEmptyFileMissingDir()
+PASS   : KArchiveTest::testTarRootDir()
+QWARN  : KArchiveTest::testTarDirectoryTwice() kf.archive: directory  "/" has entry "d" already
+PASS   : KArchiveTest::testTarDirectoryTwice()
+QWARN  : KArchiveTest::testTarIgnoreRelativePathOutsideArchive() kf.archive: Attempted export into folder "/tmp/karchivetest-xFPGgY/subdir/.." which is outside of the extraction root folder "/tmp/karchivetest-xFPGgY/subdir" . Changing export of contained files to extraction root folder.
+PASS   : KArchiveTest::testTarIgnoreRelativePathOutsideArchive()
+PASS   : KArchiveTest::testTarLongNonASCIINames()
+PASS   : KArchiveTest::testTarShortNonASCIINames()
+QWARN  : KArchiveTest::testTarGzHugeMemoryUsage() kf.archive: Invalid longlink size -1
+QWARN  : KArchiveTest::testTarGzHugeMemoryUsage() kf.archive: path recursion limit exceeded, bailing out
+PASS   : KArchiveTest::testTarGzHugeMemoryUsage()
+PASS   : KArchiveTest::testTarDeepDirHierarchy()
+PASS   : KArchiveTest::benchmarkTarDeepDirHierarchy()
+RESULT : KArchiveTest::benchmarkTarDeepDirHierarchy():
+     14,821 msecs per iteration (total: 14,821, iterations: 1)
+PASS   : KArchiveTest::testCreateZip()
+PASS   : KArchiveTest::testCreateZipError()
+PASS   : KArchiveTest::testReadZipError()
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x9D6BD31: ???
+==153670== 
+PASS   : KArchiveTest::testReadZip()
+PASS   : KArchiveTest::testZipFileData()
+PASS   : KArchiveTest::testZipCopyTo()
+PASS   : KArchiveTest::testZipMaxLength()
+PASS   : KArchiveTest::testZipWithNonLatinFileNames()
+PASS   : KArchiveTest::testZipWithOverwrittenFileName()
+PASS   : KArchiveTest::testZipAddLocalDirectory()
+PASS   : KArchiveTest::testZipReadRedundantDataDescriptor(noSignature)
+PASS   : KArchiveTest::testZipReadRedundantDataDescriptor(withSignature)
+PASS   : KArchiveTest::testZipDirectoryPermissions()
+PASS   : KArchiveTest::testZipUnusualButValid()
+PASS   : KArchiveTest::testZipDuplicateNames()
+PASS   : KArchiveTest::testZipWithinZip()
+PASS   : KArchiveTest::testZipPrependedData()
+PASS   : KArchiveTest::testZip64()
+PASS   : KArchiveTest::testZipReopenWithoutDoubleDeletion()
+PASS   : KArchiveTest::testZip64NestedStored()
+PASS   : KArchiveTest::testZip64NestedStoredStreamed()
+PASS   : KArchiveTest::testZip64EndOfCentralDirectory()
+PASS   : KArchiveTest::testZip64DataDescriptor()
+PASS   : KArchiveTest::testZip64ExtraZip64Size()
+XFAIL  : KArchiveTest::testZip64ExtraZip64SizeFirst() Zip64 extra at front incorrectly parsed
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/autotests/karchivetest.cpp(1570)]
+PASS   : KArchiveTest::testZip64ExtraZip64SizeFirst()
+PASS   : KArchiveTest::testZip64ExtraZip64Offset()
+PASS   : KArchiveTest::testZipOssFuzzIssue433303801()
+PASS   : KArchiveTest::testZipDeepDirHierarchy()
+PASS   : KArchiveTest::benchmarkZipDeepDirHierarchy()
+RESULT : KArchiveTest::benchmarkZipDeepDirHierarchy():
+     77 msecs per iteration (total: 77, iterations: 1)
+PASS   : KArchiveTest::testRcc()
+PASS   : KArchiveTest::testAr()
+PASS   : KArchiveTest::testCreate7Zip(.7z)
+RESULT : KArchiveTest::testCreate7Zip():".7z":
+     822 msecs per iteration (total: 822, iterations: 1)
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x99FE8A1: ???
+==153670== 
+==153670== Conditional jump or move depends on uninitialised value(s)
+==153670==    at 0xCD19D0E: ???
+==153670==    by 0x95D3711: ???
+==153670== 
+PASS   : KArchiveTest::testRead7Zip(.7z)
+RESULT : KArchiveTest::testRead7Zip():".7z":
+     69 msecs per iteration (total: 69, iterations: 1)
+PASS   : KArchiveTest::test7ZipFileData(.7z)
+PASS   : KArchiveTest::test7ZipCopyTo(.7z)
+PASS   : KArchiveTest::test7ZipReadWrite(.7z)
+PASS   : KArchiveTest::test7ZipMaxLength(.7z)
+PASS   : KArchiveTest::test7ZipNamelessFile()
+PASS   : KArchiveTest::test7ZipMultipleNamelessFiles()
+PASS   : KArchiveTest::test7ZipReadNumber()
+PASS   : KArchiveTest::test7ZipFileNameEndsInSlash()
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(issue_440829292)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(issue_441906077)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_4566647131406336)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_4784793343819776)
+QWARN  : KArchiveTest::test7ZipOssFuzzIssues(testcase_5082404562993152) kf.archive: KXzFilter::init: LZMA2 unexpected number of properties 0
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5082404562993152)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5125023070486528)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5132547098214400)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5141245598171136)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5161502865948672)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5497856632094720)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5503074996387840)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5560695602348032)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5581009572921344)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5821682553257984)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_5991129817612288)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6077171694370816)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6096742417498112)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6213340184772608)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6248361801089024)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6366650283917312)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6532014901886976)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6593198198947840)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6597581431177216)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6653406484955136)
+PASS   : KArchiveTest::test7ZipOssFuzzIssues(testcase_6740459604213760)
+PASS   : KArchiveTest::test7ZipPasswordProtected()
+PASS   : KArchiveTest::test7ZipReadCoder(copy)
+PASS   : KArchiveTest::test7ZipReadCoder(lzma)
+PASS   : KArchiveTest::test7ZipReadCoder(lzma2)
+PASS   : KArchiveTest::test7ZipReadCoder(deflate)
+PASS   : KArchiveTest::test7ZipReadCoder(bcj)
+XFAIL  : KArchiveTest::test7ZipReadCoder(bcj2) bcj2 decoding fails, see https://bugs.kde.org/show_bug.cgi?id=509201
+   Loc: [/home/lemon/Desktop/Projects/2024_Research_Samsa/vendor/karchive/autotests/karchivetest.cpp(2090)]
+PASS   : KArchiveTest::test7ZipReadCoder(bcj2)
+PASS   : KArchiveTest::test7ZipReadCoder(bzip2)
+PASS   : KArchiveTest::test7ZipReadCoder(zstd)
+PASS   : KArchiveTest::cleanupTestCase()
+Totals: 130 passed, 0 failed, 0 skipped, 0 blacklisted, 143862ms
+********* Finished testing of KArchiveTest *********
+==153670== 
+==153670== HEAP SUMMARY:
+==153670==     in use at exit: 17,648 bytes in 18 blocks
+==153670==   total heap usage: 549,408 allocs, 549,390 frees, 7,183,676,965 bytes allocated
+==153670== 
+==153670== LEAK SUMMARY:
+==153670==    definitely lost: 0 bytes in 0 blocks
+==153670==    indirectly lost: 0 bytes in 0 blocks
+==153670==      possibly lost: 336 bytes in 1 blocks
+==153670==    still reachable: 17,312 bytes in 17 blocks
+==153670==         suppressed: 0 bytes in 0 blocks
+==153670== Reachable blocks (those to which a pointer was found) are not shown.
+==153670== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==153670== 
+==153670== For lists of detected and suppressed errors, rerun with: -s
+==153670== ERROR SUMMARY: 16 errors from 16 contexts (suppressed: 0 from 0)

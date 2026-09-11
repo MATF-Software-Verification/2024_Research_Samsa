@@ -1,0 +1,5 @@
+Valgrind memcheck run -- KArchive 633dc09 (no suppressions; see TRIAGE.md)
+
+vs_robustnesstest      ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0) | definitely lost: 0 bytes in 2 blocks
+vs_roundtriptest       ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0) | definitely lost: 0 bytes in 0 blocks
+karchivetest           ERROR SUMMARY: 16 errors from 16 contexts (suppressed: 0 from 0) | definitely lost: 0 bytes in 0 blocks
